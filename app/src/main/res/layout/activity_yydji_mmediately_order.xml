@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#50000000"
+    android:id="@+id/rel_password"
+
+    >
+    <!--<LinearLayout-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="0dp"></LinearLayout>-->
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="请您完善信息"
+            android:layout_marginTop="15dp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/tv_wanshan"
+            android:textColor="@color/pink_word_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <FrameLayout
+            android:layout_marginLeft="17dp"
+            android:layout_below="@id/tv_wanshan"
+            android:id="@+id/fl_line"
+            android:background="@color/pink_word_home"
+            android:layout_width="1dp"
+            android:layout_height="16dp"/>
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/fl_line"
+            android:layout_below="@id/tv_wanshan"
+            android:id="@+id/tv_yuchanqi"
+            android:text="您的预产期"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_marginTop="15dp"
+            android:layout_below="@id/fl_line"
+            android:layout_marginLeft="26dp"
+            android:layout_marginRight="26dp"
+            android:id="@+id/rv_month"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <RelativeLayout
+
+            android:layout_marginTop="10dp"
+            android:id="@+id/rl_name"
+            android:layout_below="@id/rv_month"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginLeft="26dp"
+            android:text="您的称呼:"
+            android:layout_centerVertical="true"
+            android:textColor="@color/pink_word_home"
+            android:textSize="15sp"
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/et_name"
+            android:background="@null"
+            android:textSize="14sp"
+            android:layout_centerVertical="true"
+            android:hint="请输入您的昵称"
+            android:textColor="@color/text_color_back"
+            android:layout_toRightOf="@id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <FrameLayout
+            android:layout_marginLeft="26dp"
+            android:layout_marginRight="26dp"
+            android:background="@color/bg_color"
+            android:id="@+id/fl_below_rl__name"
+            android:layout_below="@id/rl_name"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+        <RelativeLayout
+
+            android:layout_marginTop="20dp"
+            android:id="@+id/rl_phone"
+            android:layout_below="@id/fl_below_rl__name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_marginLeft="26dp"
+                android:text="您的称呼:"
+                android:layout_centerVertical="true"
+                android:textColor="@color/pink_word_home"
+                android:textSize="15sp"
+                android:id="@+id/tv_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/et_phone"
+                android:background="@null"
+                android:textSize="14sp"
+                android:layout_centerVertical="true"
+                android:hint="请输入您的昵称"
+                android:textColor="@color/text_color_back"
+                android:layout_toRightOf="@id/tv_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </RelativeLayout>
+        <FrameLayout
+            android:layout_marginLeft="26dp"
+            android:layout_marginRight="26dp"
+            android:background="@color/bg_color"
+            android:id="@+id/fl_below_rl_phone"
+            android:layout_below="@id/rl_phone"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+        <Button
+            android:layout_marginTop="20dp"
+            android:text="    完成    "
+            android:background="@drawable/bg_shape_pink_shixin_corners_small"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/fl_below_rl_phone"
+            android:textColor="@color/white"
+            android:id="@+id/btn_over"
+            android:layout_width="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:layout_height="35dp" />
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/ll_passheight"
+            android:layout_width="wrap_content"
+            android:layout_height="400dp"></LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/ic_title"
+        layout="@layout/title_layout"/>
+    <EditText
+        android:layout_centerVertical="true"
+        android:id="@+id/et_phone"
+        android:layout_width="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_height="27dp"
+        android:layout_gravity="center_horizontal"
+
+
+        android:background="@null"
+        android:drawableRight="@mipmap/pink_sousuo"
+        android:drawablePadding="10dp"
+        android:paddingLeft="10dp"
+        android:hint="孕期问题"
+        android:singleLine="true"
+        android:textColor="@color/text_color_back"
+        android:textColorHint="@color/gw_color_1"
+        android:textCursorDrawable="@null"
+        android:textSize="10sp"
+        />
+        <FrameLayout
+            android:background="@color/bg_color"
+            android:layout_width="match_parent"
+            android:layout_height="6dp"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <fragment
+            android:layout_marginLeft="12dp"
+            android:id="@+id/item_list"
+            android:name="cn.aiyangkeji.fragmnets.LeftFragment"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+        <FrameLayout
+            android:background="@color/bg_color"
+            android:layout_width="10dp"
+            android:layout_height="match_parent"/>
+        <fragment
+            android:id="@+id/item_detail_container"
+            android:name="cn.aiyangkeji.fragmnets.RightFragment"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="2" />
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

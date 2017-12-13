@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/in_clude"
+        layout="@layout/title_layout"/>
+
+    <TextView
+        android:layout_marginTop="28dp"
+        android:layout_marginLeft="12dp"
+        android:layout_below="@id/in_clude"
+        android:id="@+id/tv_question"
+        android:text="我们的问答方式是否解决了您的问题？"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <RelativeLayout
+        android:id="@+id/rl_idea"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_below="@id/tv_question"
+        android:background="@drawable/bg_shape_black_zhijiao_xuxian_small"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp">
+        <EditText
+            android:id="@+id/et_idea"
+            android:paddingTop="8dp"
+            android:paddingLeft="10dp"
+            android:textSize="12sp"
+            android:hint="请留下您的宝贵意见"
+            android:background="@null"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_confirm"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:layout_below="@id/rl_idea"
+        android:background="@drawable/bg_shape_pink_shixin_corners_small"
+        android:textColor="@color/white"
+        android:text="               确认提交               "
+        android:layout_width="wrap_content"
+        android:layout_height="35dp" />
+
+
+</RelativeLayout>

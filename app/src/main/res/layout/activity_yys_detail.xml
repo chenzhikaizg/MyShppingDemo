@@ -1,0 +1,861 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/root"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    //   android:theme="@style/horizontal_slide">
+    <include
+        android:id="@+id/iv_clude"
+        layout="@layout/title_layout"/>
+
+        <ScrollView
+            android:layout_below="@id/iv_clude"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    android:background="@color/pink_word_home"
+                    >
+
+
+                    <ImageView
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:src="@mipmap/tao_my_icon_normal_"
+                        android:id="@+id/iv_user_icon"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="40dp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="陶云海"
+                        android:layout_toRightOf="@id/iv_user_icon"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="16sp"
+                        android:id="@+id/tv_name"
+                        android:textColor="@color/white"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="国家一级营养师"
+                        android:textSize="13sp"
+                        android:layout_below="@id/tv_name"
+                        android:layout_toRightOf="@id/iv_user_icon"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:id="@+id/tv_grade"
+                        android:textColor="@color/white"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="私人营养师服务内容："
+                        android:layout_below="@id/tv_grade"
+                        android:layout_toRightOf="@id/iv_user_icon"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="11sp"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/white"
+                        />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+
+                        android:layout_below="@id/iv_user_icon"
+                        android:id="@+id/rl_1"
+                        >
+
+                        <Button
+                            android:layout_width="57dp"
+                            android:layout_height="17dp"
+                            android:background="@drawable/bg_yingyang"
+                            android:layout_marginLeft="40dp"
+                            android:layout_centerVertical="true"
+                            android:text="营养配餐"
+
+                            android:textSize="12sp"
+                            android:gravity="center"
+                            android:textColor="@color/pink_line"
+                            android:id="@+id/btn_1"
+                            />
+
+
+                        <Button
+                            android:layout_width="57dp"
+                            android:layout_height="17dp"
+                            android:background="@drawable/bg_yingyang"
+                            android:layout_toRightOf="@id/btn_1"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:text="营养指导"
+                            android:textSize="12sp"
+                            android:gravity="center"
+                            android:textColor="@color/pink_line"
+                            android:id="@+id/btn_2"
+                            />
+
+
+                        <Button
+                            android:layout_width="57dp"
+                            android:layout_height="17dp"
+                            android:background="@drawable/bg_yingyang"
+                            android:layout_toRightOf="@id/btn_2"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:text="营养诊断"
+                            android:textSize="12sp"
+                            android:gravity="center"
+                            android:textColor="@color/pink_line"
+                            android:id="@+id/btn_3"
+                            />
+
+                        <Button
+                            android:layout_width="57dp"
+                            android:layout_height="17dp"
+                            android:background="@drawable/bg_yingyang"
+                            android:layout_toRightOf="@id/btn_3"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:text="营养咨询"
+                            android:textSize="12sp"
+                            android:gravity="center"
+                            android:textColor="@color/pink_line"
+                            android:id="@+id/btn_4"
+                            />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_below="@id/rl_1"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="好评率：99%"
+                            android:textSize="12sp"
+                            android:textColor="@color/white"
+                            android:layout_marginLeft="40dp"
+                            android:layout_centerVertical="true"
+                            android:id="@+id/tv_praise_rate"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="服务人数：90"
+                            android:textSize="12sp"
+                            android:textColor="@color/white"
+                            android:layout_toRightOf="@id/tv_praise_rate"
+                            android:layout_marginLeft="10dp"
+                            android:layout_centerVertical="true"
+                            android:id="@+id/tv_service_person_num"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="服务单数：90单"
+                            android:textSize="12sp"
+                            android:textColor="@color/white"
+                            android:layout_toRightOf="@id/tv_service_person_num"
+                            android:layout_marginLeft="10dp"
+                            android:layout_centerVertical="true"
+                            android:id="@+id/tv_service_order_num"
+                            />
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:id="@+id/rl_person"
+                    >
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/rl_goodat"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="个人擅长："
+                            android:textSize="14sp"
+                            android:textColor="@color/text_color_back"
+                            android:id="@+id/tv_person"
+                            android:layout_marginTop="2dp"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="多喝点水好处多多喝点水好处多多喝点水好处多多喝点水好处多"
+                            android:layout_toRightOf="@id/tv_person"
+                            android:layout_centerVertical="true"
+                            android:textSize="13sp"
+                            android:textColor="@color/text_grey"
+                            />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:id="@+id/rl_experiment"
+                        android:layout_below="@id/rl_goodat"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        >
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="经验业绩："
+                            android:textSize="14sp"
+                            android:textColor="@color/text_color_back"
+                            android:id="@+id/tv_person2"
+                            android:layout_centerVertical="true"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="好处多多喝点水好处多"
+                            android:layout_toRightOf="@id/tv_person2"
+                            android:layout_centerVertical="true"
+                            android:textSize="13sp"
+                            android:textColor="@color/text_grey"
+                            />
+
+                    </RelativeLayout>
+
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:layout_below="@id/rl_experiment"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:id="@+id/rl_work"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="工作阅历："
+                            android:textSize="14sp"
+                            android:textColor="@color/text_color_back"
+                            android:id="@+id/tv_person3"
+                            android:layout_centerVertical="true"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="好处多多喝点水好处多"
+                            android:layout_toRightOf="@id/tv_person3"
+                            android:layout_centerVertical="true"
+                            android:textSize="13sp"
+                            android:textColor="@color/text_grey"
+                            />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:background="@color/bg_color"
+                    />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_marginBottom="17dp"
+                        android:layout_marginTop="17dp"
+                        android:id="@+id/rl_rv_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_marginRight="26dp"
+                            android:id="@+id/rv_sanjiao"
+                            android:layout_marginLeft="13dp"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/sanjiaoxing_my_icon_normal_"
+                            android:layout_width="6dp"
+                            android:layout_height="10dp" />
+
+                        <TextView
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/rv_sanjiao"
+                            android:textSize="16sp"
+                            android:textColor="@color/wd_rv_title"
+                            android:id="@+id/wd_rv_title"
+                            android:text="秋季减肥该怎么做"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/tv_kind"
+                            android:text="婴幼儿辅食"
+                            android:layout_marginRight="13dp"
+                            android:textColor="@color/wd_rv_title"
+                            android:textSize="16sp"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_neirong"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/rl_rv_title">
+
+                        <ImageView
+                            android:id="@+id/wd_rv_headview"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="11dp"
+                            android:scaleType="fitXY"
+                            android:src="@mipmap/touxiang_muy_icon_normal_"
+
+                            />
+
+                        <RelativeLayout
+                            android:id="@+id/rl_touting"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/wd_rv_headview">
+
+                            <TextView
+                                android:id="@+id/wd_rv_tv_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="18dp"
+                                android:text="陶云海"
+                                android:textColor="@color/wd_rv_title"
+                                android:textSize="16sp" />
+
+                            <ImageView
+                                android:id="@+id/wd_rv_touting"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/wd_rv_tv_name"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="17dp"
+                                android:src="@mipmap/yiyuantouting_my_icon_normal_" />
+
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_marginTop="39dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+
+                                android:id="@+id/wd_rv_tt_renshu"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="16dp"
+                                android:layout_alignParentLeft="true"
+                                android:gravity="end"
+                                android:text="39人听过"
+                                android:textColor="@color/wd_rv_ttrs"
+                                android:textSize="12sp" />
+                            <TextView
+
+                                android:text="￥"
+                                android:textColor="#e57591"
+                                android:textSize="13sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:layout_marginRight="17dp"
+
+                                android:text="1"
+                                android:id="@+id/wd_rv_money"
+                                android:textColor="#e57591"
+                                android:textSize="16sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <FrameLayout
+                        android:layout_marginTop="17dp"
+                        android:background="@color/bg_color"
+                        android:layout_below="@+id/rl_neirong"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp">
+
+                    </FrameLayout>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_marginBottom="17dp"
+                        android:layout_marginTop="17dp"
+                        android:id="@+id/rl_rv_title_two"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_marginRight="26dp"
+                            android:id="@+id/rv_sanjiao_two"
+                            android:layout_marginLeft="13dp"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/sanjiaoxing_my_icon_normal_"
+                            android:layout_width="6dp"
+                            android:layout_height="10dp" />
+
+                        <TextView
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/rv_sanjiao_two"
+                            android:textSize="16sp"
+                            android:textColor="@color/wd_rv_title"
+                            android:id="@+id/wd_rv_title_two"
+                            android:text="秋季减肥该怎么做"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/tv_kind_two"
+                            android:text="婴幼儿辅食"
+                            android:layout_marginRight="13dp"
+                            android:textColor="@color/wd_rv_title"
+                            android:textSize="16sp"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_neirong_two"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/rl_rv_title_two">
+
+                        <ImageView
+                            android:id="@+id/wd_rv_headview_two"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="11dp"
+                            android:scaleType="fitXY"
+                            android:src="@mipmap/touxiang_muy_icon_normal_"
+
+                            />
+
+                        <RelativeLayout
+                            android:id="@+id/rl_touting_two"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/wd_rv_headview_two">
+
+                            <TextView
+                                android:id="@+id/wd_rv_tv_name_two"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="18dp"
+                                android:text="陶云海"
+                                android:textColor="@color/wd_rv_title"
+                                android:textSize="16sp" />
+
+                            <ImageView
+                                android:id="@+id/wd_rv_touting_two"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/wd_rv_tv_name_two"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="17dp"
+                                android:src="@mipmap/yiyuantouting_my_icon_normal_" />
+
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_marginTop="39dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+
+                                android:id="@+id/wd_rv_tt_renshu_two"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="16dp"
+                                android:layout_alignParentLeft="true"
+                                android:gravity="end"
+                                android:text="39人听过"
+                                android:textColor="@color/wd_rv_ttrs"
+                                android:textSize="12sp" />
+                            <TextView
+
+                                android:text="￥"
+                                android:textColor="#e57591"
+                                android:textSize="13sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:layout_marginRight="17dp"
+
+                                android:text="1"
+                                android:id="@+id/wd_rv_money_two"
+                                android:textColor="#e57591"
+                                android:textSize="16sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <FrameLayout
+                        android:layout_marginTop="17dp"
+                        android:background="@color/bg_color"
+                        android:layout_below="@+id/rl_neirong_two"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp">
+
+                    </FrameLayout>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/rl_touting_more"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="13dp"
+                        android:layout_alignParentRight="true"
+                        android:id="@+id/iv_img_more"
+                        android:src="@mipmap/morn_my_icon_normal_"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:textColor="@color/text_grey"
+                        android:textSize="12sp"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/iv_img_more"
+                        android:layout_width="wrap_content"
+                        android:text="查看更多"
+                        android:layout_height="wrap_content" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <FrameLayout
+                        android:id="@+id/fl_user_comment"
+                        android:background="@color/pink_line"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="13dp"
+                        android:layout_width="3dp"
+                        android:layout_height="15dp"/>
+                    <TextView
+                        android:text="用户评论"
+                        android:textSize="16sp"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/text_color_back"
+                        android:layout_toRightOf="@id/fl_user_comment"
+                        android:id="@+id/tv_user_comment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_marginTop="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:id="@+id/rl_comment_one"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_marginLeft="11dp"
+                            android:id="@+id/iv_head_one"
+                            android:src="@mipmap/touxiang_muy_icon_normal_"
+                            android:layout_centerVertical="true"
+                            android:layout_width="29dp"
+                            android:layout_height="29dp" />
+                        <TextView
+                            android:text="燕子"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@id/iv_head_one"
+                            android:layout_centerVertical="true"
+                            android:id="@+id/tv_name_one"
+                            android:textColor="@color/pink_word_home"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:layout_marginRight="16dp"
+                            android:text="2017-22-22"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            android:id="@+id/tv_comment_data_one"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+                    <TextView
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginBottom="20dp"
+                        android:id="@+id/tv_comment_one"
+                        android:layout_below="@id/rl_comment_one"
+                        android:textSize="12sp"
+                        android:textColor="@color/text_grey"
+                        android:text="湿哒哒所大大所多打算大叔大婶大丰收大富大贵梵蒂冈的高度分工问题问题飞得更高胜多负少东方闪电发斯蒂芬斯蒂芬sdgsdg胜多负少东方闪电发胜多负少东方闪电发是打发斯蒂芬"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
+                </RelativeLayout>
+                <FrameLayout
+                    android:background="@color/bg_color"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+                <RelativeLayout
+                    android:layout_marginTop="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:id="@+id/rl_comment_two"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_marginLeft="11dp"
+                            android:id="@+id/iv_head_two"
+                            android:src="@mipmap/touxiang_muy_icon_normal_"
+                            android:layout_centerVertical="true"
+                            android:layout_width="29dp"
+                            android:layout_height="29dp" />
+                        <TextView
+                            android:text="燕子"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@id/iv_head_two"
+                            android:layout_centerVertical="true"
+                            android:id="@+id/tv_name_two"
+                            android:textColor="@color/pink_word_home"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:layout_marginRight="16dp"
+                            android:text="2017-22-22"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            android:id="@+id/tv_comment_data_two"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+                    <TextView
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginBottom="20dp"
+                        android:id="@+id/tv_comment_two"
+                        android:layout_below="@id/rl_comment_two"
+                        android:textSize="12sp"
+                        android:textColor="@color/text_grey"
+                        android:text="湿哒哒所大大所多打算大叔大婶大丰收大富大贵梵蒂冈的高度分工问题问题飞得更高胜多负少东方闪电发斯蒂芬斯蒂芬sdgsdg胜多负少东方闪电发胜多负少东方闪电发是打发斯蒂芬"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/rl_comment_more"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="13dp"
+                        android:layout_alignParentRight="true"
+                        android:id="@+id/iv_comment_more"
+                        android:src="@mipmap/morn_my_icon_normal_"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:textColor="@color/text_grey"
+                        android:textSize="12sp"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/iv_comment_more"
+                        android:layout_width="wrap_content"
+                        android:text="查看更多"
+                        android:layout_height="wrap_content" />
+
+
+                </RelativeLayout>
+                <RelativeLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <FrameLayout
+                        android:id="@+id/fl_service_detail"
+                        android:background="@color/pink_line"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="13dp"
+                        android:layout_width="3dp"
+                        android:layout_height="15dp"/>
+                    <TextView
+                        android:text="服务详情"
+                        android:textSize="16sp"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/text_color_back"
+                        android:layout_toRightOf="@id/fl_service_detail"
+                        android:id="@+id/tv_service_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
+                </RelativeLayout>
+                <ListView
+                    android:layout_marginBottom="40dp"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/lv_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </LinearLayout>
+
+        </ScrollView>
+        <FrameLayout
+            android:layout_above="@+id/ll_bottom"
+            android:background="@color/pink_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+        <LinearLayout
+            android:background="@color/white"
+            android:id="@+id/ll_bottom"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <RelativeLayout
+                android:id="@+id/rl_attention"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_marginRight="5dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/tv_collection"
+                    android:id="@+id/iv_collection_status"
+                    android:src="@mipmap/collection_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tv_collection"
+                    android:textSize="14sp"
+                    android:text="关注"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+            <FrameLayout
+                android:layout_alignParentRight="true"
+                android:background="@color/pink_line"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rl_zixun"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <TextView
+
+                    android:textSize="14sp"
+                    android:text="免费咨询"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rl_now_buy"
+                android:background="@color/pink_line"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <TextView
+
+                    android:textSize="14sp"
+                    android:text="立即下单"
+                    android:textColor="@color/white"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+</RelativeLayout>

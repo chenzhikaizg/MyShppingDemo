@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/in_clude"
+        layout="@layout/title_layout"/>
+    <cn.aiyangkeji.view.AutoListView
+        android:layout_below="@id/in_clude"
+        android:id="@+id/lv_yys_collection"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:dividerHeight="0.5dip"
+        android:divider="@color/bg_white"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        />
+
+
+</RelativeLayout>

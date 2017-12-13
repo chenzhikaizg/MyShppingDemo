@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_white"
+    android:orientation="vertical"
+    >
+    <include
+        layout="@layout/title_layout"/>
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40dip"
+        android:layout_marginTop="10dip"
+        android:layout_marginBottom="15dip"
+        android:paddingRight="15dip"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="42dip"
+            android:orientation="horizontal"
+            android:layout_centerInParent="true"
+            android:padding="1dip"
+
+            >
+            <TextView
+                android:id="@+id/tv_xiaoxi"
+                android:layout_width="158dip"
+                android:layout_height="fill_parent"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:text="消息"
+                android:gravity="center"
+                android:background="@drawable/bg_shape_pink_left_bottom_corner"
+                />
+            <TextView
+                android:id="@+id/tv_tonghzi"
+                android:layout_width="158dip"
+                android:layout_height="fill_parent"
+                android:textColor="@color/text_color_back"
+                android:textSize="16sp"
+                android:text="通知"
+                android:gravity="center"
+                android:background="@drawable/bg_shape_pink_right_bottom_corner_shixan_kongxin"
+
+                />
+        </LinearLayout>
+    </RelativeLayout>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/jazzy_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        />
+</LinearLayout>

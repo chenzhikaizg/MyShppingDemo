@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:background="@color/bg_color"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/rl_yunqi_yy"
+            android:background="@color/white"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="110dp">
+            <ImageView
+                android:id="@+id/iv_yunqi_yy"
+                android:src="@mipmap/yunqi_zyys_iocn_normal_"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+            <TextView
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/iv_yunqi_yy"
+                android:text="孕期营养"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                />
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rl_buru_yy"
+            android:background="@color/white"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="110dp">
+            <ImageView
+                android:id="@+id/iv_buru_yy"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/buru_zyys_icon_normal_"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                />
+            <TextView
+                android:layout_marginBottom="10dp"
+                android:id="@+id/tv_buru_yy"
+                android:layout_below="@id/iv_buru_yy"
+                android:layout_marginTop="10dp"
+                android:text="哺乳营养"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rl_yingyou_yy"
+            android:background="@color/white"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="110dp">
+            <ImageView
+                android:id="@+id/iv_yingyou_yy"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/yingyou_zyys_icon_normal_"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                />
+            <TextView
+                android:layout_marginBottom="10dp"
+                android:id="@+id/tv_yingyou_yy"
+                android:layout_below="@id/iv_yingyou_yy"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:text="婴幼营养"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="2dp"
+        android:background="@color/bg_color"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/rl_ertong_yy"
+            android:background="@color/white"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="110dp">
+            <ImageView
+                android:id="@+id/iv_ertong_yy"
+                android:src="@mipmap/ertong_zyys_icon_normal_"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                />
+            <TextView
+                android:layout_marginBottom="10dp"
+                android:id="@+id/tv_ertong_yy"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/iv_ertong_yy"
+                android:text="儿童营养"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rl_yundong_yy"
+            android:background="@color/white"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="110dp">
+            <ImageView
+                android:id="@+id/iv_yundong_yy"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/yuedong_zyys_icon_normal_"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                />
+            <TextView
+                android:layout_marginBottom="10dp"
+                android:id="@+id/tv_yundong_yy"
+                android:layout_below="@id/iv_yundong_yy"
+                android:layout_marginTop="10dp"
+                android:text="运动营养"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rl_linchuang_yy"
+            android:background="@color/white"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="110dp">
+            <ImageView
+                android:id="@+id/iv_linchuang_yy"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/yingyou_zyys_icon_normal_"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                />
+            <TextView
+                android:layout_marginBottom="10dp"
+                android:id="@+id/tv_linchuan_yy"
+                android:layout_below="@id/iv_linchuang_yy"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:text="临床营养"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:background="@color/bg_color"
+        android:layout_width="match_parent"
+        android:layout_height="5dp">
+
+    </FrameLayout>
+    <LinearLayout
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="90dp">
+            <RelativeLayout
+                android:id="@+id/rl_wend_tting"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:scaleType="fitXY"
+                    android:layout_marginRight="10dp"
+                    android:id="@+id/iv_wenda"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/wenda_zyys_iocn_normal_"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp" />
+                <TextView
+                    android:layout_toRightOf="@id/iv_wenda"
+                    android:layout_centerVertical="true"
+                    android:text="问答偷听"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+        <FrameLayout
+            android:background="@color/bg_color"
+            android:layout_width="1dp"
+            android:layout_height="90dp"></FrameLayout>
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="90dp">
+            <RelativeLayout
+                android:id="@+id/rl_quick_wend"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:scaleType="fitXY"
+                    android:layout_marginRight="10dp"
+                    android:id="@+id/iv_kuaisu_wenda"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/kuansuwenda_zyys_icon_normal_"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp" />
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/iv_kuaisu_wenda"
+                    android:text="快速问答"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+    <!--<FrameLayout-->
+        <!--android:background="@color/bg_color"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="5dp"/>-->
+
+</LinearLayout>

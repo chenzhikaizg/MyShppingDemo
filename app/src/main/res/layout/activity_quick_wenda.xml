@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/in_clude"
+        layout="@layout/title_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/in_clude">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/rl_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="250dp"
+                android:layout_below="@id/in_clude"
+                android:background="@drawable/bg_shape_black_zhijiao_xuxian_small">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@null"
+                    android:hint="请输入您咨询的营养健康问题，分答被他人付费偷听，您将获得45%的分成收益，问题描述的越精准明确被偷听的几率越高哦！"
+                    android:textSize="13sp" />
+
+                <FrameLayout
+                    android:id="@+id/fl_img"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/bg_shape_grey_zhijiao_xuxian_small">
+
+                    <ImageView
+                        android:id="@+id/iv_confirm_img"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                    <ImageView
+                        android:id="@+id/iv_img"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/shanchuantupian" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom">
+
+                        <TextView
+                            android:id="@+id/tv_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="2dp"
+                            android:gravity="bottom"
+                            android:text="上传图片"
+                            android:textSize="10sp" />
+                    </RelativeLayout>
+                </FrameLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_kind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_edit"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:text="请选择您的类别"
+                android:textColor="@color/text_color_back"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:id="@+id/ll_yys_class_one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_kind"
+                android:layout_marginLeft="13dp"
+                android:layout_marginRight="13dp"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_one"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="7dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_shape_black_zhijiao_xuxian_small"
+                    android:text="孕期营养"
+                    android:textColor="#666666"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/btn_two_class"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="7dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_shape_black_zhijiao_xuxian_small"
+                    android:text="哺乳期营养"
+                    android:textColor="#666666"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/btn_three"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_shape_black_zhijiao_xuxian_small"
+                    android:text="婴幼儿营养"
+                    android:textColor="#666666"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_yys_class_two"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_yys_class_one"
+                android:layout_marginLeft="13dp"
+                android:layout_marginRight="13dp"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_four"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="7dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_shape_black_zhijiao_xuxian_small"
+                    android:text="儿童营养"
+                    android:textColor="#666666"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/btn_five"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="7dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_shape_black_zhijiao_xuxian_small"
+                    android:text="运动营养"
+                    android:textColor="#666666"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/btn_six"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_shape_black_zhijiao_xuxian_small"
+                    android:text="三高慢病营养"
+                    android:textColor="#666666"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="80dp"
+                android:layout_below="@+id/ll_yys_class_two"
+                android:layout_alignLeft="@+id/rl_edit"
+                android:layout_alignStart="@+id/rl_edit">
+                <!--<TextView-->
+                    <!--android:layout_above="@id/btn_ask"-->
+                    <!--android:layout_centerHorizontal="true"-->
+                    <!--android:id="@+id/tv_miaoshu"-->
+                    <!--android:text="已抵用0元，还需支付1元"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content" />-->
+
+                <Button
+
+
+                    android:id="@+id/btn_ask"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/bg_shape_pink_shixin_corners_small"
+                    android:text="      十元快速提问      "
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>

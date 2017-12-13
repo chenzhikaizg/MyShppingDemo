@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- 杩欎釜鏍囩琛ㄧず绾壊濉厖锛岄�氳繃android:color鍗冲彲鎸囧畾shape涓～鍏呯殑棰滆壊 -->
+    <solid android:color="@color/white" />
+
+    <!-- 琛ㄧずshape鐨勫洓涓鐨勮搴︺�傚彧閫傜敤浜庣煩褰hape锛岃繖閲岀殑瑙掑害鏄寚鍦嗚鐨勭▼搴� -->
+    <corners android:radius="8dip" />
+
+    <!-- Shape鐨勬弿杈癸紝涓嬮潰鎸囧畾浜嗘弿杈圭殑瀹藉害鍜屾弿杈圭殑棰滆壊 -->
+    <stroke
+        android:width="1dp"
+        android:color="@color/bg_color" />
+</shape>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/white"
+android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_ss"
+        android:layout_width="match_parent"
+      android:background="@color/text_color_back"
+
+        android:layout_height="44dp"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <ImageView
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/icon_back"
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+
+            />
+        <!--<TextView-->
+            <!--android:background="@drawable/bg_shape_white_shixin"-->
+            <!--android:text="  裤子"-->
+            <!--android:layout_marginLeft="20dp"-->
+            <!--android:layout_toLeftOf="@+id/ll_find"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginRight="20dp"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content" />-->
+        <EditText
+        android:layout_centerVertical="true"
+        android:id="@+id/et_find"
+        android:layout_width="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_height="27dp"
+        android:layout_gravity="center_horizontal"
+
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/bg_shape_white_shixin_corner_25"
+        android:drawableLeft="@mipmap/sousuo_icon_normal_"
+        android:drawablePadding="10dp"
+
+        android:paddingLeft="10dp"
+        android:hint="孕期问题"
+        android:singleLine="true"
+        android:textColor="@color/text_color_back"
+        android:textColorHint="@color/gw_color_1"
+        android:textCursorDrawable="@null"
+        android:textSize="10sp"
+        />
+        <!--<ImageView-->
+            <!--android:id="@+id/iv_home_find"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginLeft="40dp"-->
+            <!--android:layout_marginRight="40dp"-->
+            <!--android:src="@mipmap/home_find_img"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="27dp" />-->
+
+        <LinearLayout
+            android:id="@+id/ll_find"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:orientation="vertical"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_gravity="center_horizontal"
+                android:layout_alignParentRight="true"
+                android:id="@+id/iv_xiao_xi"
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:src="@mipmap/xiaoxi_icon_norma_"
+                />
+
+            <TextView
+                android:id="@+id/tv_find"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_height="wrap_content"
+                android:text="搜索"
+                android:textColor="@color/home_title_color"
+                android:textSize="10sp"
+
+                />
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+        <TextView
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="22dp"
+            android:text="历史搜索"
+            android:textColor="@color/text_color_back"
+            android:textSize="18sp"
+            android:layout_below="@id/rl_ss"
+            android:id="@+id/tv_history_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    <ListView
+        android:layout_below="@id/tv_history_title"
+        android:id="@+id/lv_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+        <FrameLayout
+            android:layout_marginBottom="50dp"
+
+            android:id="@+id/fl_below_list"
+            android:layout_below="@id/lv_history"
+            android:background="@color/bg_color"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+        <RelativeLayout
+            android:layout_marginRight="50dp"
+            android:layout_marginLeft="50dp"
+            android:background="@drawable/bg_shape_black_zhijiao_xuxian_small"
+
+            android:layout_below="@id/fl_below_list"
+            android:id="@+id/rl_clear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:id="@+id/iv_rubbish"
+                android:layout_toLeftOf="@+id/tv_clear"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/rubbish"
+                android:layout_width="25dp"
+                android:layout_height="20dp" />
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_centerInParent="true"
+                android:textSize="14sp"
+                android:textColor="@color/text_color_back"
+                android:text="清空搜索历史"
+                android:id="@+id/tv_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</ScrollView>

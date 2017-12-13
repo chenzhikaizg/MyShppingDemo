@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+        <include
+            android:id="@+id/in_title"
+            layout="@layout/title_layout"/>
+        <ScrollView
+            android:layout_below="@id/in_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                         <RelativeLayout
+                    android:id="@+id/rl_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/tv_name"
+                            android:text="姓名"
+                            android:layout_centerVertical="true"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginLeft="29dp"
+                            android:layout_marginRight="28dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <EditText
+                            android:id="@+id/et_name"
+                            android:layout_marginTop="24dp"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/bg_shape_grey_corners_xuxian_small"
+                            android:layout_toRightOf="@id/tv_name"
+                            android:layout_width="170dp"
+                            android:layout_height="wrap_content" />
+                        </RelativeLayout>
+
+
+
+
+                </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_age"
+                            android:layout_below="@id/rl_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                                <TextView
+                                    android:id="@+id/tv_age"
+                                    android:text="年龄"
+                                    android:layout_centerVertical="true"
+
+                                    android:layout_marginLeft="29dp"
+                                    android:layout_marginRight="28dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                                <EditText
+                                    android:id="@+id/et_age"
+                                    android:layout_marginTop="16dp"
+                                    android:layout_centerVertical="true"
+                                    android:background="@drawable/bg_shape_grey_corners_xuxian_small"
+                                    android:layout_toRightOf="@id/tv_age"
+                                    android:layout_width="170dp"
+                                    android:layout_height="wrap_content" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_height"
+                            android:layout_below="@id/rl_age"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                                <TextView
+                                    android:id="@+id/tv_height"
+                                    android:text="身高"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="29dp"
+                                    android:layout_marginRight="28dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                                <EditText
+                                    android:id="@+id/et_height"
+                                    android:layout_marginTop="16dp"
+                                    android:layout_centerVertical="true"
+                                    android:background="@drawable/bg_shape_grey_corners_xuxian_small"
+                                    android:layout_toRightOf="@id/tv_height"
+                                    android:layout_width="170dp"
+                                    android:layout_height="wrap_content" />
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:id="@+id/rl_weight"
+                            android:layout_below="@id/rl_height"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                                <TextView
+                                    android:id="@+id/tv_weight"
+                                    android:text="当前体重"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="29dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                                <EditText
+                                    android:id="@+id/et_weight"
+                                    android:layout_marginTop="16dp"
+                                    android:layout_centerVertical="true"
+                                    android:background="@drawable/bg_shape_grey_corners_xuxian_small"
+                                    android:layout_toRightOf="@id/tv_weight"
+                                    android:layout_width="60dp"
+                                    android:layout_marginRight="16dp"
+                                    android:layout_height="wrap_content" />
+                                <TextView
+                                    android:text="孕前体重"
+                                    android:id="@+id/tv_yunqian_weight"
+                                    android:layout_toRightOf="@id/et_weight"
+                                    android:layout_marginTop="16dp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_width="wrap_content"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_height="wrap_content" />
+                                <EditText
+                                    android:id="@+id/et_yunqian_weight"
+                                    android:layout_marginTop="16dp"
+                                    android:layout_centerVertical="true"
+                                    android:background="@drawable/bg_shape_grey_corners_xuxian_small"
+                                    android:layout_toRightOf="@id/tv_yunqian_weight"
+                                    android:layout_width="60dp"
+                                    android:layout_marginRight="16dp"
+                                    android:layout_height="wrap_content" />
+                        </RelativeLayout>
+                        <TextView
+                            android:text="如果是育龄女性，是否处于孕期"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginLeft="29dp"
+                            android:id="@+id/tv_yunqi_title"
+                            android:layout_below="@id/rl_weight"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:layout_toRightOf="@id/tv_yunqi_title"
+                            android:text="(单选)"
+                            android:layout_marginTop="30dp"
+                            android:layout_below="@id/rl_weight"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <RelativeLayout
+                            android:layout_marginTop="15dp"
+                            android:layout_marginLeft="31dp"
+                            android:id="@+id/rl_yuling_one"
+                            android:layout_below="@id/tv_yunqi_title"
+                            android:layout_width="260dp"
+                            android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_centerVertical="true"
+                                    android:text="①.近两年没有怀孕打算"
+                                    android:id="@+id/tv_buxiang_huaiyun"
+                                    android:layout_width="wrap_content"
+                                    android:layout_marginRight="20dp"
+                                    android:layout_height="wrap_content" />
+                                <ImageView
+                                    android:id="@+id/iv_one"
+                                    android:layout_centerVertical="true"
+                                    android:layout_alignParentRight="true"
+                                    android:src="@mipmap/weixianzhong_icon_normal_"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_marginTop="15dp"
+                            android:layout_marginLeft="31dp"
+                            android:id="@+id/rl_yuling_two"
+                            android:layout_below="@id/rl_yuling_one"
+                            android:layout_width="260dp"
+                            android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_centerVertical="true"
+                                    android:text="②.想要孩子还在备孕中"
+                                    android:id="@+id/tv_yuling_two"
+                                    android:layout_width="wrap_content"
+                                    android:layout_marginRight="20dp"
+                                    android:layout_height="wrap_content" />
+                                <ImageView
+                                    android:id="@+id/iv_two"
+                                    android:layout_centerVertical="true"
+                                    android:layout_alignParentRight="true"
+                                    android:src="@mipmap/weixianzhong_icon_normal_"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_marginTop="15dp"
+                            android:layout_marginLeft="31dp"
+                            android:id="@+id/rl_yuling_three"
+                            android:layout_below="@id/rl_yuling_two"
+                            android:layout_width="260dp"
+                            android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_centerVertical="true"
+                                    android:text="③.已经怀孕啦"
+                                    android:id="@+id/tv_yuling_three"
+                                    android:layout_width="wrap_content"
+                                    android:layout_marginRight="20dp"
+                                    android:layout_height="wrap_content" />
+                                <ImageView
+                                    android:id="@+id/iv_three"
+                                    android:layout_centerVertical="true"
+                                    android:layout_alignParentRight="true"
+                                    android:src="@mipmap/weixianzhong_icon_normal_"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_marginTop="15dp"
+                            android:layout_marginLeft="31dp"
+                            android:id="@+id/rl_yuling_four"
+                            android:layout_below="@id/rl_yuling_three"
+                            android:layout_width="260dp"
+                            android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_centerVertical="true"
+                                    android:text="④.宝宝已出生"
+                                    android:id="@+id/tv_yuling_four"
+                                    android:layout_width="wrap_content"
+                                    android:layout_marginRight="20dp"
+                                    android:layout_height="wrap_content" />
+                                <ImageView
+                                    android:id="@+id/iv_four"
+                                    android:layout_centerVertical="true"
+                                    android:layout_alignParentRight="true"
+                                    android:src="@mipmap/weixianzhong_icon_normal_"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/tv_nation"
+                            android:text="民族"
+                            android:layout_below="@id/rl_yuling_four"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginLeft="29dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:text="（单选）"
+                            android:layout_toRightOf="@id/tv_nation"
+                            android:layout_below="@id/rl_yuling_four"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <RelativeLayout
+                            android:layout_marginTop="15dp"
+                            android:layout_marginLeft="31dp"
+                            android:id="@+id/rl_hanzu"
+                            android:layout_below="@id/tv_nation"
+                            android:layout_width="260dp"
+                            android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_centerVertical="true"
+                                    android:text="汉族"
+                                    android:id="@+id/tv_hanzu"
+                                    android:layout_width="wrap_content"
+                                    android:layout_marginRight="20dp"
+                                    android:layout_height="wrap_content" />
+                                <ImageView
+                                    android:layout_alignParentRight="true"
+                                    android:id="@+id/iv_haunzu"
+                                    android:layout_centerVertical="true"
+
+                                    android:src="@mipmap/weixianzhong_icon_normal_"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_marginTop="15dp"
+                            android:layout_marginLeft="31dp"
+                            android:id="@+id/rl_little_nation"
+                            android:layout_below="@id/rl_hanzu"
+                            android:layout_width="260dp"
+                            android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_centerVertical="true"
+                                    android:text="少数民族"
+                                    android:id="@+id/tv_little_nation"
+                                    android:layout_width="wrap_content"
+                                    android:layout_marginRight="20dp"
+                                    android:layout_height="wrap_content" />
+                                <ImageView
+                                    android:layout_alignParentRight="true"
+                                    android:id="@+id/iv_little_nation"
+                                    android:layout_centerVertical="true"
+
+                                    android:src="@mipmap/weixianzhong_icon_normal_"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                        </RelativeLayout>
+                        <TextView
+                            android:id="@+id/tv_profession"
+                            android:text="职业"
+                            android:layout_below="@id/rl_little_nation"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginLeft="29dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:text="（单选）"
+                            android:layout_toRightOf="@id/tv_profession"
+                            android:layout_below="@id/rl_little_nation"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <RelativeLayout
+                            android:layout_marginTop="15dp"
+                            android:layout_marginLeft="31dp"
+                            android:id="@+id/rl_student"
+                            android:layout_below="@id/tv_profession"
+                            android:layout_width="260dp"
+                            android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_centerVertical="true"
+                                    android:text="学生"
+                                    android:id="@+id/tv_student"
+                                    android:layout_width="wrap_content"
+                                    android:layout_marginRight="20dp"
+                                    android:layout_height="wrap_content" />
+                                <ImageView
+                                    android:layout_alignParentRight="true"
+                                    android:id="@+id/iv_student"
+                                    android:layout_centerVertical="true"
+
+                                    android:src="@mipmap/weixianzhong_icon_normal_"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_marginTop="15dp"
+                            android:layout_marginLeft="31dp"
+                            android:id="@+id/rl_mm"
+                            android:layout_below="@id/rl_student"
+                            android:layout_width="260dp"
+                            android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_centerVertical="true"
+                                    android:text="全职妈妈"
+                                    android:id="@+id/tv_mm"
+                                    android:layout_width="wrap_content"
+                                    android:layout_marginRight="20dp"
+                                    android:layout_height="wrap_content" />
+                                <ImageView
+                                    android:layout_alignParentRight="true"
+                                    android:id="@+id/iv_mm"
+                                    android:layout_centerVertical="true"
+
+                                    android:src="@mipmap/weixianzhong_icon_normal_"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_marginTop="15dp"
+                            android:layout_marginLeft="31dp"
+                            android:id="@+id/rl_worker"
+                            android:layout_below="@id/rl_mm"
+                            android:layout_width="260dp"
+                            android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_centerVertical="true"
+                                    android:text="工人/服务人员"
+                                    android:id="@+id/tv_worker"
+                                    android:layout_width="wrap_content"
+                                    android:layout_marginRight="20dp"
+                                    android:layout_height="wrap_content" />
+                                <ImageView
+                                    android:layout_alignParentRight="true"
+                                    android:id="@+id/iv_worker"
+                                    android:layout_centerVertical="true"
+
+                                    android:src="@mipmap/weixianzhong_icon_normal_"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_marginTop="15dp"
+                            android:layout_marginLeft="31dp"
+                            android:id="@+id/rl_bailing"
+                            android:layout_below="@id/rl_worker"
+                            android:layout_width="260dp"
+                            android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_centerVertical="true"
+                                    android:text="办公室白领"
+                                    android:id="@+id/tv_bailing"
+                                    android:layout_width="wrap_content"
+                                    android:layout_marginRight="20dp"
+                                    android:layout_height="wrap_content" />
+                                <ImageView
+                                    android:layout_alignParentRight="true"
+                                    android:id="@+id/iv_bailing"
+                                    android:layout_centerVertical="true"
+
+                                    android:src="@mipmap/weixianzhong_icon_normal_"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_marginTop="15dp"
+                            android:layout_marginLeft="31dp"
+                            android:id="@+id/rl_freedom"
+                            android:layout_below="@id/rl_bailing"
+                            android:layout_width="260dp"
+                            android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_centerVertical="true"
+                                    android:text="自由职业"
+                                    android:id="@+id/tv_freedom"
+                                    android:layout_width="wrap_content"
+                                    android:layout_marginRight="20dp"
+                                    android:layout_height="wrap_content" />
+                                <ImageView
+                                    android:layout_alignParentRight="true"
+                                    android:id="@+id/iv_freedom"
+                                    android:layout_centerVertical="true"
+
+                                    android:src="@mipmap/weixianzhong_icon_normal_"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/tv_jiancha_img"
+                            android:text="是否有医院出具的具体报告"
+                            android:layout_below="@id/rl_freedom"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginLeft="29dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:text="（没有请忽略本项）"
+                            android:layout_toRightOf="@id/tv_jiancha_img"
+                            android:layout_below="@id/rl_freedom"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <FrameLayout
+                            android:id="@+id/fl_img"
+                            android:layout_below="@id/tv_jiancha_img"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="50dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                                <TextView
+                                    android:text="请添加图片"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+
+                        </FrameLayout>
+
+                </RelativeLayout>
+
+        </ScrollView>
+        <RelativeLayout
+            android:id="@+id/rl_save"
+            android:background="@color/pink_word_home"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="@color/white"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="立即保存"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+        </RelativeLayout>
+</RelativeLayout>

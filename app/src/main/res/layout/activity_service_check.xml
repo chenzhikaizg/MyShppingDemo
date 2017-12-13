@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#50000000"
+    android:id="@+id/rel_password"
+
+    >
+    <!--<LinearLayout-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="0dp"></LinearLayout>-->
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_below="@id/rl_siren_fuwu"
+            android:id="@+id/tv_qianyue_time"
+            android:textColor="@color/text_color_back"
+            android:text="签约时间"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:id="@+id/ll_content"
+            android:layout_marginBottom="100dp"
+            android:layout_below="@id/tv_qianyue_time"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:orientation="horizontal"
+            >
+
+
+            <RelativeLayout
+                android:id="@+id/rl_money_one"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/btn_new_bg_selector_1"
+                android:padding="4dp"
+                android:layout_marginLeft="15dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="598元/1月"
+                    android:textSize="14sp"
+                    android:textColor="#999999"
+                    android:layout_marginTop="15dp"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/rl_money_1"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="已签单:50单"
+                    android:textSize="14sp"
+                    android:textColor="#999999"
+                    android:layout_below="@id/rl_money_1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/tv_order"
+                    />
+
+                <ImageView
+                    android:id="@+id/iv_money_one"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@mipmap/weixianzhong_icon_normal_"
+                    android:layout_below="@id/tv_order"
+                    android:layout_centerHorizontal="true"
+                    />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+
+                android:id="@+id/rl_money_two"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/btn_new_bg_selector_1"
+                android:padding="4dp"
+                android:layout_marginLeft="4dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="598元/1月"
+                    android:textSize="14sp"
+                    android:textColor="#999999"
+                    android:layout_marginTop="15dp"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/rl_money_2"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="已签单:50单"
+                    android:textSize="14sp"
+                    android:textColor="#999999"
+                    android:layout_below="@id/rl_money_2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/tv_order2"
+                    />
+
+                <ImageView
+                    android:id="@+id/iv_money_two"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@mipmap/weixianzhong_icon_normal_"
+                    android:layout_below="@id/tv_order2"
+                    android:layout_centerHorizontal="true"
+                    />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_money_three"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/btn_new_bg_selector_1"
+                android:layout_marginLeft="4dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="598元/1月"
+                    android:textSize="14sp"
+                    android:textColor="#999999"
+                    android:layout_marginTop="15dp"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/rl_money_3"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="已签单:50单"
+                    android:textSize="14sp"
+                    android:textColor="#999999"
+                    android:layout_below="@id/rl_money_3"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/tv_order3"
+                    />
+
+                <ImageView
+                    android:id="@+id/iv_money_three"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@mipmap/weixianzhong_icon_normal_"
+                    android:layout_below="@id/tv_order3"
+                    android:layout_centerHorizontal="true"
+                    />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_money_four"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/btn_new_bg_selector_1"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="10dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="598元/1月"
+                    android:textSize="14sp"
+                    android:textColor="#999999"
+                    android:layout_marginTop="15dp"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/rl_money_4"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="已签单:50单"
+                    android:textSize="14sp"
+                    android:textColor="#999999"
+                    android:layout_below="@id/rl_money_4"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/tv_order4"
+                    />
+
+                <ImageView
+                    android:id="@+id/iv_money_four"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@mipmap/weixianzhong_icon_normal_"
+                    android:layout_below="@id/tv_order4"
+                    android:layout_centerHorizontal="true"
+                    />
+            </RelativeLayout>
+
+        </LinearLayout>
+        <Button
+            android:layout_marginTop="20dp"
+            android:text="    立即支付    "
+            android:background="@drawable/bg_shape_pink_shixin_corners_small"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/ll_content"
+            android:textColor="@color/white"
+            android:id="@+id/btn_over"
+            android:layout_width="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:layout_height="35dp" />
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/ll_passheight"
+            android:layout_width="wrap_content"
+            android:layout_height="400dp"></LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

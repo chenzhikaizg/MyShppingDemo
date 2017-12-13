@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/in_clude"
+        layout="@layout/title_layout"/>
+    <TextView
+        android:id="@+id/tv_explain"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/in_clude"
+        android:text="请输入优惠兑换码（可在优惠券上面查看）："
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/et_number"
+        android:background="@drawable/bg_shape_grey_corners_xuxian_small"
+        android:hint="请输入兑换码"
+        android:layout_marginRight="12dp"
+        android:layout_marginLeft="12dp"
+        android:textColor="@color/text_color_back"
+        android:layout_marginTop="12dp"
+        android:padding="10dp"
+        android:layout_below="@id/tv_explain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btn_confirm"
+        android:text="                  确定                  "
+        android:layout_marginTop="70dp"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bg_shape_pink_shixin_corners_small"
+        android:layout_below="@id/et_number"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp" />
+
+</RelativeLayout>

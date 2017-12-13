@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:id="@+id/rl_content"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/iv_product_img"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="14dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/timg"
+            android:layout_width="84dp"
+            android:layout_height="84dp" />
+        <TextView
+            android:layout_marginLeft="11dp"
+            android:textSize="14sp"
+            android:text="打火机奥斯卡大家哈时刻记得回家撒斯柯达爱仕达爱仕达"
+            android:layout_toRightOf="@id/iv_product_img"
+            android:id="@+id/tv_product_name"
+            android:textColor="@color/text_color_back"
+            android:layout_marginTop="20dp"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_product_price"
+            android:text="￥139"
+            android:layout_marginLeft="11dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/iv_product_img"
+            android:textColor="@color/pink_word_home"
+            android:layout_below="@id/tv_product_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_marginTop="20dp"
+            android:textSize="13sp"
+            android:id="@+id/tv_attention_status"
+            android:layout_below="@id/tv_product_name"
+            android:layout_alignParentRight="true"
+
+            android:background="@drawable/bg_shape_grey_login_border_no_solid"
+            android:text="取消关注"
+            android:layout_marginRight="17dp"
+            android:layout_marginBottom="9dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="3dp"
+            android:paddingTop="3dp"
+            android:textColor="@color/text_grey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <!--<TextView-->
+            <!--android:layout_marginTop="20dp"-->
+            <!--android:textSize="13sp"-->
+            <!--android:id="@+id/tv_add_cart"-->
+            <!--android:layout_below="@id/tv_product_name"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:background="@drawable/bg_shape_grey_login_border_no_solid"-->
+            <!--android:text="加入购物车"-->
+            <!--android:layout_marginRight="17dp"-->
+            <!--android:layout_marginBottom="9dp"-->
+
+            <!--android:paddingLeft="5dp"-->
+            <!--android:paddingRight="5dp"-->
+            <!--android:paddingBottom="3dp"-->
+            <!--android:paddingTop="3dp"-->
+            <!--android:textColor="@color/text_grey"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content" />-->
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

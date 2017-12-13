@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <include
+        android:id="@+id/in_clude"
+        layout="@layout/title_layout"/>
+
+    <RelativeLayout
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="12dp"
+        android:background="@color/pink_word_home"
+        android:layout_below="@id/in_clude"
+        android:id="@+id/rl_clear_cache"
+        android:layout_width="match_parent"
+        android:layout_height="44dp">
+
+        <TextView
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="12dp"
+            android:layout_centerInParent="true"
+            android:text="清除缓存"
+            android:textColor="@color/white"
+            android:id="@+id/tv_clear_cache"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="12dp"
+        android:background="@color/pink_word_home"
+        android:layout_below="@id/rl_clear_cache"
+        android:id="@+id/rl_amned_password"
+        android:layout_width="match_parent"
+        android:layout_height="44dp">
+        <TextView
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="12dp"
+            android:layout_centerInParent="true"
+            android:id="@+id/tv_amend_password"
+            android:textColor="@color/white"
+            android:text="忘记密码"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <!--<RelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content">-->
+
+    <!--</RelativeLayout>-->
+
+    <RelativeLayout
+
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="50dp"
+        android:layout_marginLeft="12dp"
+        android:background="@color/text_999999"
+       android:layout_alignParentBottom="true"
+        android:id="@+id/rl_exit_login"
+        android:layout_width="match_parent"
+        android:layout_height="44dp">
+        <TextView
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="12dp"
+            android:layout_centerInParent="true"
+            android:id="@+id/tv_exit_login"
+            android:textColor="@color/white"
+            android:text="退出登录"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

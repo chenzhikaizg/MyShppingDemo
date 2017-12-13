@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="#fb6d90"
+        android:layout_height="44dp">
+
+
+        <ImageView
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/icon_back"
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            />
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:text="aaaa"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            />
+        <TextView
+            android:textSize="16sp"
+            android:text="注册"
+            android:id="@+id/tv_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/white"
+            android:layout_marginRight="14dp"            />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        >
+        <EditText
+            android:id="@+id/et_phone"
+            android:layout_width="fill_parent"
+            android:layout_height="35dip"
+            android:background="@null"
+            android:textSize="15sp"
+            android:hint="请输入手机号码"
+            android:textColor="@color/text_color_back"
+            android:textColorHint="@color/gw_color_1"
+            android:textCursorDrawable="@null"
+            android:gravity="bottom"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="20dp"
+            android:paddingLeft="10dp"
+            android:layout_marginTop="30dip"
+            android:layout_marginBottom="5dp"
+            />
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:background="@color/bg_color"
+            android:layout_marginRight="40dip"
+            android:layout_marginLeft="40dip"
+            />
+        <RelativeLayout
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/et_password"
+                android:layout_width="fill_parent"
+                android:layout_height="35dip"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="请输入密码"
+                android:textColor="@color/text_color_back"
+                android:textColorHint="@color/gw_color_1"
+                android:textCursorDrawable="@null"
+                android:textSize="15sp"
+                android:layout_marginLeft="10dp"
+                android:paddingLeft="10dp"
+                android:layout_centerVertical="true"
+
+                />
+            <View
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="@color/bg_color"
+                android:layout_marginRight="40dip"
+                android:layout_below="@id/et_password"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_marginTop="26dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_forget"
+                android:layout_alignParentRight="true"
+                android:textColor="#b01a1a1a"
+                android:text="忘记密码"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+
+        <Button
+
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="登陆"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:background="@drawable/bg_shape_pink_shixin_corners_small"
+            android:layout_marginRight="40dp"
+            android:layout_marginLeft="40dp"
+            android:id="@+id/btn_login" />
+
+        <LinearLayout
+            android:layout_marginRight="18dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="57dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <FrameLayout
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@color/text_color_back"
+                android:layout_width="0dp"
+                android:layout_height="1dp">
+
+            </FrameLayout>
+            <TextView
+                android:textColor="#1a1a1a"
+                android:layout_gravity="center_vertical"
+                android:text="快捷登陆"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <FrameLayout
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@color/text_color_back"
+                android:layout_width="0dp"
+                android:layout_height="1dp">
+
+            </FrameLayout>
+
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_marginTop="20dp"
+
+            android:layout_gravity="center_horizontal"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_alignParentLeft="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/iv_weixin"
+                   android:layout_centerHorizontal="true"
+                    android:src="@mipmap/login_weixin"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"  />
+                <TextView
+                    android:layout_centerHorizontal="true"
+                    android:textColor="#b01a1a1a"
+                    android:text="微信"
+
+                    android:layout_below="@id/iv_weixin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+
+                    android:id="@+id/iv_qq"
+                  android:layout_centerHorizontal="true"
+                    android:src="@mipmap/login_qq"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp" />
+                <TextView
+                    android:layout_below="@id/iv_qq"
+                    android:layout_centerHorizontal="true"
+                    android:text="QQ"
+                    android:textColor="#b01a1a1a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

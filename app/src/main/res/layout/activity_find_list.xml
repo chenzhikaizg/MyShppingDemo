@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_ss"
+        android:layout_width="match_parent"
+      android:background="@color/text_color_back"
+
+        android:layout_height="44dp"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <ImageView
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/icon_back"
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+
+            />
+        <RelativeLayout
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@+id/ll_find"
+            android:background="@drawable/bg_shape_white_shixin"
+            android:layout_width="match_parent"
+            android:layout_height="27dp">
+        <TextView
+            android:id="@+id/tv_find_text"
+            android:text="  "
+            android:layout_marginLeft="10dp"
+
+            android:textSize="12sp"
+
+            android:layout_centerVertical="true"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <!--<EditText-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:id="@+id/et_find"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_height="27dp"-->
+        <!--android:layout_gravity="center_horizontal"-->
+
+        <!--android:layout_marginLeft="40dp"-->
+        <!--android:layout_marginRight="40dp"-->
+        <!--android:background="@drawable/bg_shape_white_shixin_corner_25"-->
+        <!--android:drawableLeft="@mipmap/sousuo_icon_normal_"-->
+        <!--android:drawablePadding="10dp"-->
+
+        <!--android:paddingLeft="10dp"-->
+        <!--android:hint="孕期问题"-->
+        <!--android:singleLine="true"-->
+        <!--android:textColor="@color/text_color_back"-->
+        <!--android:textColorHint="@color/gw_color_1"-->
+        <!--android:textCursorDrawable="@null"-->
+        <!--android:textSize="10sp"-->
+        <!--/>-->
+        <!--<ImageView-->
+            <!--android:id="@+id/iv_home_find"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginLeft="40dp"-->
+            <!--android:layout_marginRight="40dp"-->
+            <!--android:src="@mipmap/home_find_img"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="27dp" />-->
+
+        <LinearLayout
+            android:id="@+id/ll_find"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:orientation="vertical"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <!--<ImageView-->
+                <!--android:layout_gravity="center_horizontal"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:id="@+id/iv_xiao_xi"-->
+                <!--android:layout_width="17dp"-->
+                <!--android:layout_height="17dp"-->
+                <!--android:src="@mipmap/xiaoxi_icon_norma_"-->
+                <!--/>-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/tv_find"-->
+                <!--android:layout_gravity="center_horizontal"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="搜索"-->
+                <!--android:textColor="@color/home_title_color"-->
+                <!--android:textSize="10sp"-->
+
+                <!--/>-->
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

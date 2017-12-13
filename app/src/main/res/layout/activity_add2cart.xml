@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#50000000"
+    android:id="@+id/rel_password"
+
+    >
+    <!--<LinearLayout-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="0dp"></LinearLayout>-->
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+        <ImageView
+            android:src="@mipmap/timg"
+            android:id="@+id/iv_product_img"
+            android:scaleType="centerCrop"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="90dp"
+            android:layout_height="90dp" />
+        <TextView
+            android:id="@+id/tv_product_price"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/iv_product_img"
+            android:text="50"
+            android:layout_marginTop="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_have_num"
+            android:layout_toRightOf="@id/iv_product_img"
+            android:layout_below="@id/tv_product_price"
+            android:layout_marginLeft="10dp"
+            android:text="库存：12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="颜色"
+            android:textSize="16sp"
+            android:id="@+id/tv_color_title"
+            android:textColor="@color/text_color_back"
+            android:layout_below="@id/iv_product_img"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <android.support.v7.widget.RecyclerView
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_below="@id/tv_color_title"
+            android:id="@+id/rv_color"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </android.support.v7.widget.RecyclerView>
+        <FrameLayout
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:id="@+id/fl_below_rv_color"
+            android:layout_below="@id/rv_color"
+            android:background="@color/bg_color"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+        <TextView
+            android:text="规格"
+            android:textSize="16sp"
+            android:id="@+id/tv_size_title"
+            android:textColor="@color/text_color_back"
+            android:layout_below="@id/fl_below_rv_color"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_below="@id/tv_size_title"
+            android:id="@+id/rv_size"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <FrameLayout
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:id="@+id/fl_below_rv_size"
+            android:layout_below="@id/rv_size"
+            android:background="@color/bg_color"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+        <RelativeLayout
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/rl_buy_num"
+            android:layout_below="@id/fl_below_rv_size"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <TextView
+            android:text="购买数量"
+            android:textSize="16sp"
+            android:id="@+id/tv_buynum_title"
+            android:textColor="@color/text_color_back"
+            android:layout_centerVertical="true"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/tv_buy_num"
+                android:id="@+id/iv_jian"
+
+                android:src="@mipmap/buy_product_jianhao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/iv_jia"
+                android:id="@+id/tv_buy_num"
+                android:text="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_marginRight="42dp"
+                android:layout_centerVertical="true"
+                android:id="@+id/iv_jia"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/buy_product_jiahao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+
+        <Button
+            android:layout_marginTop="50dp"
+            android:text="    确定    "
+            android:background="@drawable/bg_shape_pink_shixin_corners_small"
+            android:layout_centerHorizontal="true"
+
+            android:layout_below="@id/rl_buy_num"
+            android:textColor="@color/white"
+            android:id="@+id/btn_over"
+            android:layout_width="match_parent"
+
+            android:layout_height="55dp" />
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/ll_passheight"
+            android:layout_width="wrap_content"
+            android:layout_height="400dp"></LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

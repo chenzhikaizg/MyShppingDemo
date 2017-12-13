@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_marginRight="10dp"
+    android:background="@mipmap/pink_kuang"
+    android:layout_height="match_parent">
+
+    <ListView
+        android:layout_marginTop="10dp"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        android:id="@+id/lsvMore"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:dividerHeight="0.5dp"
+        android:layout_weight="1" />
+
+</LinearLayout>

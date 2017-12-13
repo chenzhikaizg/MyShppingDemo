@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:background="@color/white"
+    android:id="@+id/ll_yys_item"
+    android:orientation="horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="16dp"
+        android:id="@+id/rl_head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_centerHorizontal="true"
+            android:id="@+id/iv_head"
+            android:layout_width="67dp"
+            android:layout_height="67dp"
+            android:src="@mipmap/tao_my_icon_normal_" />
+
+        <TextView
+            android:background="@drawable/bg_shape_grey_login_border_no_solid"
+            android:id="@+id/tv_yys_name"
+            android:layout_marginTop="4dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/iv_head"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="葫芦娃" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="22dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/tv_zhiwei"
+        android:textColor="@color/text_color_back"
+        android:text="国家的一大堆"
+        android:textSize="16sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+        <TextView
+            android:textSize="14sp"
+            android:layout_below="@id/tv_zhiwei"
+            android:textColor="@color/text_grey"
+            android:id="@+id/tv_danwei"
+            android:text="国家的一大堆"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:textSize="13sp"
+            android:layout_below="@+id/tv_danwei"
+            android:textColor="@color/text_color_back"
+            android:id="@+id/tv_shanchang"
+            android:text="国家的一大堆"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/tv_shanchang"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:scaleType="fitXY"
+
+                    android:layout_gravity="center_vertical"
+                    android:src="@mipmap/haoping_my_icon_normal_"
+                    android:layout_marginRight="5dp"
+                    android:layout_width="11dp"
+                    android:layout_height="11dp" />
+
+                <TextView
+                    android:layout_marginRight="10dp"
+                    android:id="@+id/tv_haoping"
+                    android:textSize="12sp"
+                    android:text="好评率99%"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/text_999999"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_marginRight="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/dingdan_my_icon_normal_"
+                    android:layout_width="11dp"
+                    android:layout_height="11dp"
+                    />
+
+                <TextView
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/text_order_num"
+                    android:layout_marginRight="10dp"
+                    android:textSize="12sp"
+                    android:textColor="@color/text_999999"
+                    android:text="585单"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="5dp"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/renshu_my_icon_normal_"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/tv_jie_num"
+                    android:text="98人"
+                    android:textSize="12sp"
+                    android:textColor="@color/text_999999"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

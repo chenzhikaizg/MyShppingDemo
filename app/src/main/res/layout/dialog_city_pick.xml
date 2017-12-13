@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" 
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/text_color_grey"/>
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/btn_citypick_sure"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="确定"
+            android:textSize="20sp"
+            android:textColor="@color/pink_word_home"
+            android:layout_alignParentRight="true" />
+        //#11b446
+
+        <TextView
+            android:id="@+id/btn_citypick_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="取消"
+            android:textSize="20sp"
+            android:textColor="@color/text_color_grey"
+            android:layout_alignParentLeft="true" />
+        
+    </RelativeLayout>
+    
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"
+        android:background="@color/text_color_grey"
+        android:layout_marginBottom="5dp"/>
+    
+    <LinearLayout
+        android:id="@+id/citypick"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"        
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dip"
+        >
+
+        <cn.aiyangkeji.view.picker.WheelView
+            android:id="@+id/province_wheel"
+            android:layout_width="70dip"
+            android:layout_height="wrap_content"
+            />
+
+        <cn.aiyangkeji.view.picker.WheelView
+            android:id="@+id/city_wheel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <cn.aiyangkeji.view.picker.WheelView
+            android:id="@+id/area_wheel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+</LinearLayout>

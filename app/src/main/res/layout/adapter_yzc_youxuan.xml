@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_centerHorizontal="true"
+            android:id="@+id/rl_iv_one"
+            android:layout_width="wrap_content"
+            android:layout_height="182dp">
+            <ImageView
+                android:src="@mipmap/timg"
+                android:id="@+id/iv_img_one"
+                android:layout_width="173dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:scaleType="centerCrop"
+                android:layout_height="178dp" />
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:text="爱仕达多"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/tv_one_name"
+            android:layout_below="@id/rl_iv_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="￥1369"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/tv_one_price"
+            android:textColor="@color/pink_word_home"
+            android:layout_below="@id/tv_one_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <!--<ImageView-->
+            <!--android:id="@+id/iv_che_one"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_marginRight="23dp"-->
+            <!--android:layout_below="@id/tv_one_name"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:src="@mipmap/gouwuche_sc_icon_normnal_"-->
+            <!--android:layout_marginBottom="10dp"-->
+            <!--android:layout_width="25dp"-->
+            <!--android:layout_height="25dp" />-->
+    </RelativeLayout>
+
+
+</RelativeLayout>

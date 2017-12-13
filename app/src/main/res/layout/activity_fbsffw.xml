@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        android:id="@+id/in_title"
+        layout="@layout/title_layout"/>
+    <ScrollView
+        android:layout_below="@id/in_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+
+            android:layout_marginTop="40pt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:id="@+id/rl_shoufei_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="26pt"
+                    android:text="收费标题:"
+                    android:textSize="36pt"
+                    android:textColor="@color/text_color_back"
+                    android:layout_marginRight="10pt"
+                    android:id="@+id/tv_money_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:paddingLeft="5pt"
+                    android:textCursorDrawable="@null"
+                    android:background="@drawable/bg_shape_grey_corners_xuxian_small"
+                    android:layout_toRightOf="@id/tv_money_title"
+                    android:layout_centerVertical="true"
+                    android:textSize="30pt"
+                    android:hint="孕期服务"
+                    android:layout_width="363pt"
+                    android:layout_height="65pt" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_below="@id/rl_shoufei_item"
+                android:id="@+id/rl_shoufei_jine"
+                android:layout_marginTop="86pt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tv_shofei_jine"
+                    android:text="收费金额:"
+                    android:layout_marginLeft="26pt"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/text_color_back"
+                    android:textSize="36pt"
+                    android:layout_marginRight="10pt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:paddingLeft="5pt"
+                    android:textCursorDrawable="@null"
+                    android:id="@+id/et_shoefei_jine"
+                    android:hint="￥598"
+                    android:textSize="30pt"
+                    android:layout_toRightOf="@id/tv_shofei_jine"
+                    android:background="@drawable/bg_shape_grey_corners_xuxian_small"
+                    android:layout_width="363pt"
+                    android:layout_height="65pt" />
+
+            </RelativeLayout>
+            <TextView
+                android:text="收费服务内容："
+                android:textSize="36pt"
+                android:textColor="@color/text_color_back"
+                android:layout_marginTop="95pt"
+                android:layout_marginLeft="26pt"
+                android:layout_below="@id/rl_shoufei_jine"
+                android:id="@+id/tv_fuwu_meirong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:layout_marginTop="34pt"
+                android:layout_marginLeft="26pt"
+
+                android:background="@drawable/bg_shape_grey_corners_xuxian_small"
+                android:layout_below="@id/tv_fuwu_meirong"
+                android:id="@+id/rl_iv_and_text"
+                android:layout_width="700pt"
+                android:layout_height="194pt">
+                    <ImageView
+                        android:id="@+id/iv_rl_img"
+                        android:layout_marginLeft="30pt"
+                        android:layout_centerVertical="true"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/cao"
+                        android:layout_width="115pt"
+                        android:layout_height="115pt" />
+
+                <EditText
+
+                    android:layout_toRightOf="@id/iv_rl_img"
+                    android:id="@+id/et_phone"
+                    android:layout_centerVertical="true"
+                    android:layout_width="fill_parent"
+                    android:layout_height="35dip"
+                    android:background="@null"
+                    android:textSize="24pt"
+                    android:hint="三德科技哈肯德基奥斯卡大家爱看的骄傲斯柯达"
+                    android:textColor="@color/text_color_back"
+                    android:textColorHint="@color/gw_color_1"
+                    android:textCursorDrawable="@null"
+
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="20dp"
+                    android:paddingLeft="10dp"
+                    android:layout_marginTop="30dip"
+                    android:layout_marginBottom="5dp"
+                    />
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/tv_check_img"
+                android:layout_below="@id/rl_iv_and_text"
+                android:text="选择收费图标"
+                android:textSize="36pt"
+                android:textColor="@color/text_color_back"
+                android:layout_marginTop="58pt"
+                android:layout_marginLeft="26pt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <GridView
+                android:layout_marginTop="30pt"
+            android:id="@+id/gv_img"
+                android:layout_marginBottom="150pt"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_check_img"
+            android:layout_marginLeft="15dip"
+            android:layout_marginRight="15dip"
+            android:columnWidth="100dp"
+            android:horizontalSpacing="5dip"
+            android:listSelector="@android:color/transparent"
+            android:numColumns="auto_fit"
+            android:overScrollMode="never"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="5dip" />
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+    <RelativeLayout
+
+        android:background="@color/pink_word_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        >
+
+        <TextView
+            android:layout_marginBottom="32pt"
+            android:layout_marginTop="32pt"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="36pt"
+            android:textColor="@color/white"
+            android:id="@+id/tv_complete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="确定发布" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

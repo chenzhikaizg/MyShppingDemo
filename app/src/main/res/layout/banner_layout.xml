@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    //轮播图
+    <cn.aiyangkeji.view.BannerView
+        android:id="@+id/bv_banner"
+        android:layout_width="fill_parent"
+        android:layout_height="149dp" />
+
+    <LinearLayout
+        android:id="@+id/ll_banner_index"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" />
+
+    <TextView
+        android:id="@+id/tv_banner_index"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dip"
+        android:text="2/3"
+        android:textColor="@color/text_color_grey"
+        android:textSize="15sp" />
+    <FrameLayout
+        android:id="@+id/fl_below_bv_banner"
+        android:background="@color/bg_color"
+        android:layout_below="@id/bv_banner"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"/>
+    //首页的四个图标
+    <LinearLayout
+
+        android:layout_below="@id/fl_below_bv_banner"
+        android:id="@+id/ll_four_icon"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/rl_find_dietician"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:id="@+id/iv_find_dietician"
+                android:layout_marginLeft="15dp"
+                android:src="@mipmap/zyys_shouye_icon_normal"
+                />
+            <ImageView
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="30dp"
+                android:src="@mipmap/shouye_jiantou"
+                android:layout_toRightOf="@id/iv_find_dietician"
+                android:id="@+id/iv_jiantou_shouyeleft"
+                android:layout_width="13dp"
+                android:layout_height="12dp" />
+            <TextView
+                android:layout_centerHorizontal="true"
+               android:layout_toRightOf="@id/iv_jiantou_shouyeleft"
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="找营养师"
+                android:textColor="@color/text_color_back"
+                android:textSize="12sp"
+                />
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:text="您的私人营养师"
+                android:layout_below="@id/iv_jiantou_shouyeleft"
+                android:layout_toRightOf="@id/iv_find_dietician"
+                android:layout_marginTop="10dp"
+                android:textSize="8sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <FrameLayout
+            android:layout_width="1dp"
+            android:background="@color/bg_color"
+            android:layout_height="match_parent"/>
+        <RelativeLayout
+            android:id="@+id/rl_nutrition_home"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="15dp"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:id="@+id/iv_nutrition_home"
+                android:src="@mipmap/aydj_shouye_icon_normal"
+                />
+            <ImageView
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="30dp"
+                android:src="@mipmap/shouye_jiantou"
+                android:layout_toRightOf="@id/iv_nutrition_home"
+                android:id="@+id/iv_jiantou_shouyeright"
+                android:layout_width="13dp"
+                android:layout_height="12dp" />
+            <TextView
+                android:layout_centerHorizontal="true"
+                android:layout_toRightOf="@id/iv_jiantou_shouyeright"
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="营养到家"
+                android:textColor="@color/text_color_back"
+                android:textSize="12sp"
+                />
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:text="把月子会所搬回家"
+                android:layout_below="@id/iv_jiantou_shouyeright"
+                android:layout_toRightOf="@id/iv_nutrition_home"
+                android:layout_marginTop="10dp"
+                android:textSize="8sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+<FrameLayout
+    android:id="@+id/fl_below_fou_icon"
+    android:layout_below="@id/ll_four_icon"
+    android:layout_width="match_parent"
+    android:background="@color/bg_color"
+    android:layout_height="5dp">
+
+</FrameLayout>
+
+    <LinearLayout
+        android:layout_marginTop="12dp"
+        android:layout_below="@id/fl_below_fou_icon"
+        android:id="@+id/ll_tujian_fuwu"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:layout_width="2dp"
+            android:layout_height="15dp"
+            android:src="@mipmap/shuzhuang_icon_normal_"
+            android:layout_marginLeft="15dp"
+            android:scaleType="fitXY"
+            />
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:text="推荐服务"
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_color_back"
+
+            />
+
+
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="8dp"
+        android:layout_below="@id/ll_tujian_fuwu"
+        android:layout_marginLeft="12dp"
+        android:id="@+id/rv_tuijian_fuwu"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="95dp">
+
+    </android.support.v7.widget.RecyclerView>
+    <FrameLayout
+
+        android:id="@+id/fl_below_tuijian_tuwu"
+        android:layout_below="@id/rv_tuijian_fuwu"
+        android:layout_width="match_parent"
+        android:background="@color/bg_color"
+        android:layout_height="5dp"/>
+
+    <LinearLayout
+        android:layout_marginTop="12dp"
+        android:layout_below="@id/fl_below_tuijian_tuwu"
+        android:id="@+id/ll_tuijian_yys"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:layout_width="2dp"
+            android:layout_height="15dp"
+            android:src="@mipmap/shuzhuang_icon_normal_"
+            android:layout_marginLeft="15dp"
+            android:scaleType="fitXY"
+            />
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:text="推荐营养师"
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_color_back"
+            />
+
+
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical"
+        android:layout_below="@id/ll_tuijian_yys"
+        android:id="@+id/rv_tujian_yys"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="12dp"
+        android:layout_height="98dp">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <FrameLayout
+
+        android:id="@+id/fl_below_rv_tujian_yys"
+        android:layout_below="@id/rv_tujian_yys"
+        android:layout_width="match_parent"
+        android:background="@color/bg_color"
+        android:layout_height="5dp"/>
+
+
+    <LinearLayout
+        android:layout_marginTop="12dp"
+        android:layout_below="@id/fl_below_rv_tujian_yys"
+        android:id="@+id/ll_tuijian_yzc"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:layout_width="2dp"
+            android:layout_height="15dp"
+            android:src="@mipmap/shuzhuang_icon_normal_"
+            android:layout_marginLeft="15dp"
+            android:scaleType="fitXY"
+            />
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:text="推荐月子餐制作"
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_color_back"
+            />
+
+
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="12dp"
+        android:layout_below="@id/ll_tuijian_yzc"
+        android:id="@+id/rv_tujian_yzc"
+        android:layout_width="match_parent"
+
+        android:layout_height="95dp">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <FrameLayout
+
+        android:id="@+id/fl_below_rv_tujian_yzc"
+        android:layout_below="@id/rv_tujian_yzc"
+        android:layout_width="match_parent"
+        android:background="@color/bg_color"
+        android:layout_height="5dp"/>
+
+    <LinearLayout
+        android:layout_marginTop="12dp"
+        android:layout_below="@id/rv_tujian_yzc"
+        android:id="@+id/ll_et_yyzs"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:layout_width="2dp"
+            android:layout_height="15dp"
+            android:src="@mipmap/shuzhuang_icon_normal_"
+            android:layout_marginLeft="15dp"
+            android:scaleType="fitXY"
+            />
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:text="儿童营养知识"
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_color_back"
+            />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

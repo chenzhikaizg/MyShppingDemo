@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/iv_icon"
+        android:src="@mipmap/beiyue_zs_icon_normal_"
+        android:layout_width="33dp"
+        android:layout_height="33dp" />
+    <TextView
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/iv_icon"
+        android:id="@+id/tv_zhishi_title"
+        android:textSize="14sp"
+        android:text="备孕"
+        android:layout_width="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_height="wrap_content" />
+    <FrameLayout
+        android:id="@+id/fl_blue"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:background="@color/common_top_bar_blue"
+        android:layout_width="3dp"
+        android:layout_height="70dp"/>
+
+</RelativeLayout>

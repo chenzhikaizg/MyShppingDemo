@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_consignee_name"
+            android:text="捏美滋滋"
+            android:textSize="14sp"
+            android:textColor="@color/text_color_back"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="14dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    <TextView
+        android:layout_below="@id/tv_consignee_name"
+        android:text="1839232222"
+        android:textSize="14sp"
+        android:textColor="@color/text_color_back"
+        android:id="@+id/tv_consignee_phone"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/tv_address"
+        android:layout_below="@id/tv_consignee_phone"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="14dp"
+        android:text="那你我看你看撒打卡打卡机大浪街道垃圾袋垃圾死了大家安利大家安利"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <FrameLayout
+        android:layout_marginTop="10dp"
+        android:id="@+id/fl_below_tv_addredd"
+        android:layout_below="@id/tv_address"
+        android:background="@color/bg_color"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@id/fl_below_tv_addredd"
+        android:id="@+id/rl_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="15dp"
+            android:src="@mipmap/weixianzhong_icon_normal_"
+            android:id="@+id/iv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="6dp"
+            />
+        <TextView
+            android:id="@+id/tv_default_address"
+            android:text="默认地址"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/iv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+            <ImageView
+                android:layout_marginLeft="16dp"
+                android:layout_centerVertical="true"
+                android:id="@+id/iv_delete"
+                android:src="@mipmap/desele_my_icon_normal_"
+                android:layout_toLeftOf="@+id/tv_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+           <TextView
+               android:layout_marginLeft="6dp"
+               android:text="删除"
+               android:id="@+id/tv_delete"
+               android:layout_centerVertical="true"
+               android:layout_alignParentRight="true"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content" />
+        <TextView
+
+            android:id="@+id/tv_position"
+            android:layout_width="0dip"
+            android:layout_height="0dip" />
+
+        <TextView
+            android:layout_marginLeft="6dp"
+            android:text="编辑"
+            android:id="@+id/tv_edit"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/iv_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:src="@mipmap/bianji_my_icon_normal_"
+            android:layout_centerVertical="true"
+            android:id="@+id/iv_edit"
+            android:layout_toLeftOf="@+id/tv_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <FrameLayout
+        android:background="@color/bg_color"
+                android:layout_below="@id/rl_setting"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+
+</RelativeLayout>

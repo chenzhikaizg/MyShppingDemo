@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:background="@color/white"
+    android:id="@+id/ll_yys_item"
+
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/ll_main"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="16dp"
+        android:id="@+id/rl_head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_centerHorizontal="true"
+            android:id="@+id/iv_head"
+            android:layout_width="67dp"
+            android:layout_height="67dp"
+            android:src="@mipmap/tao_my_icon_normal_" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/tv_name"
+        android:textColor="@color/text_grey"
+        android:text="葫芦娃"
+        android:textSize="13sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:textSize="12sp"
+            android:layout_below="@id/tv_name"
+            android:textColor="@color/text_grey"
+            android:id="@+id/tv_time"
+            android:text="2017-12-1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:textSize="12sp"
+            android:layout_below="@+id/tv_time"
+            android:textColor="@color/text_grey"
+            android:id="@+id/tv_question"
+            android:text="最近特别胖"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+            android:textColor="@color/pink_word_home"
+            android:layout_marginRight="10dp"
+            android:textSize="12sp"
+            android:id="@+id/tv_delete"
+            android:layout_alignParentRight="true"
+            android:text="    ￥123   "
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+
+    </LinearLayout>
+    <FrameLayout
+        android:layout_marginTop="10dp"
+      android:layout_below="@id/ll_main"
+        android:background="@color/bg_color"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"/>
+</RelativeLayout>

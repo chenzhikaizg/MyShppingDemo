@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/tv_ss"
+        android:layout_width="match_parent"
+        android:background="#f17b98"
+        android:layout_height="44dp"
+
+        android:visibility="visible">
+        <ImageView
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/icon_back"
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            />
+
+
+        <EditText
+            android:layout_centerVertical="true"
+            android:id="@+id/et_phone"
+            android:layout_width="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_height="27dp"
+            android:layout_gravity="center_horizontal"
+
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/bg_shape_grey_login_border_no_solid"
+            android:drawableLeft="@mipmap/sousuo_icon_normal_"
+            android:drawablePadding="10dp"
+
+            android:paddingLeft="10dp"
+            android:hint="孕期问题"
+            android:singleLine="true"
+            android:textColor="@color/text_color_back"
+            android:textColorHint="@color/gw_color_1"
+            android:textCursorDrawable="@null"
+            android:textSize="10sp"
+            />
+
+    </RelativeLayout>
+    <cn.aiyangkeji.view.AutoListView
+
+
+        android:id="@+id/lv_yys"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:dividerHeight="5dip"
+        android:divider="@color/bg_color"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        />
+
+</LinearLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:paddingLeft="14dp"
+    android:paddingRight="14dp"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+
+    android:layout_height="match_parent">
+        <ImageView
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="17dp"
+            android:src="@mipmap/timg"
+            android:id="@+id/iv_zhishi"
+            android:layout_width="112dp"
+            android:layout_height="83dp" />
+        <TextView
+            android:layout_toRightOf="@+id/iv_zhishi"
+            android:id="@+id/tv_title"
+            android:text="解放前积分卡送积分卡设计福利卡"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+         <TextView
+                android:layout_marginTop="19dp"
+             android:text="师大暨大卡时间单刷"
+             android:layout_toRightOf="@+id/iv_zhishi"
+             android:layout_below="@+id/tv_title"
+             android:id="@+id/tv_content"
+             android:layout_width="wrap_content"
+                 android:layout_height="wrap_content" />
+
+
+
+</RelativeLayout>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/ll_yys_item"
+   android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="90dp">
+
+
+    <ImageView
+
+    android:layout_width="60dp"
+    android:layout_height="60dp"
+    android:src="@mipmap/yunqianqi_icon_normal"
+    android:layout_centerVertical="true"
+    android:layout_marginLeft="15dp"
+    android:id="@+id/iv_1"
+    />
+
+    <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="孕期营养师私人服务"
+    android:textSize="16sp"
+    android:textColor="@color/text_color_back"
+    android:layout_toRightOf="@id/iv_1"
+    android:layout_marginTop="13dp"
+    android:layout_marginLeft="5dp"
+    android:id="@+id/tv_service"
+    />
+    <TextView
+        android:layout_marginLeft="15dp"
+        android:id="@+id/tv_price"
+        android:layout_toRightOf="@id/tv_service"
+        android:text="￥123"
+        android:textColor="@color/pink_line"
+        android:layout_marginTop="13dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="为您在孕期提供饮食指导，预防在孕期，能量过剩导致的肥胖和其他疾病产生"
+    android:layout_below="@id/tv_service"
+    android:layout_toRightOf="@id/iv_1"
+        android:layout_marginRight="20dp"
+    android:textSize="14sp"
+    android:textColor="#999999"
+    android:layout_marginLeft="5dp"
+    android:layout_marginTop="3dp"
+    android:padding="3dp"
+    android:id="@+id/tv_detail"
+    />
+    <ImageView
+        android:id="@+id/iv_select"
+        android:layout_marginRight="5dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="13dp"
+        android:src="@mipmap/weixianzhong_icon_normal_"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+        <include
+            android:id="@+id/in_title"
+            layout="@layout/title_layout"/>
+
+
+        <cn.aiyangkeji.view.AutoListView
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/white"
+            android:layout_below="@id/in_title"
+            android:id="@+id/lv_yys"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:dividerHeight="9dip"
+            android:divider="@color/bg_color"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            />
+
+
+</RelativeLayout>

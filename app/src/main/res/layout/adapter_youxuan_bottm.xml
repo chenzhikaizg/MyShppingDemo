@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <FrameLayout
+        android:id="@+id/fl_start"
+        android:background="@color/bg_color"
+        android:layout_width="12dp"
+        android:layout_height="130dp"/>
+        <ImageView
+            android:layout_toRightOf="@id/fl_start"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="17dp"
+            android:src="@mipmap/timg"
+            android:id="@+id/iv_zhishi"
+            android:scaleType="centerCrop"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="10dp"
+            android:layout_width="112dp"
+            android:layout_height="112dp" />
+        <TextView
+            android:layout_toRightOf="@+id/iv_zhishi"
+            android:id="@+id/tv_title"
+            android:text="真月试吃餐"
+            android:layout_marginTop="25dp"
+            android:textSize="14sp"
+            android:textColor="@color/text_color_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+         <TextView
+                android:layout_marginTop="8dp"
+             android:text="师大暨大卡时间单刷"
+             android:layout_toRightOf="@+id/iv_zhishi"
+             android:layout_below="@+id/tv_title"
+             android:id="@+id/tv_content"
+             android:textColor="@color/text_color_back"
+             android:layout_width="wrap_content"
+             android:textSize="12sp"
+                 android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_toRightOf="@+id/iv_zhishi"
+        android:text="打卡肯定就卡死"
+        android:layout_marginTop="12dp"
+        android:id="@+id/tv_product_introduce"
+        android:layout_below="@id/tv_content"
+        android:textSize="10sp"
+        android:layout_width="wrap_content"
+        android:textColor="@color/text_grey"
+        android:layout_height="wrap_content" />
+    <RelativeLayout
+        android:id="@+id/rl_price"
+        android:layout_below="@id/tv_product_introduce"
+        android:layout_toRightOf="@+id/iv_zhishi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+
+            android:text="￥123"
+            android:layout_marginTop="12dp"
+            android:id="@+id/tv_product_price"
+
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:textColor="@color/pink_word_home"
+            android:layout_height="wrap_content" />
+        <!--<ImageView-->
+            <!--android:id="@+id/iv_add_che"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_toLeftOf="@+id/fl_end"-->
+            <!--android:src="@mipmap/gouwuche_sc_icon_normnal_"-->
+            <!--android:layout_marginRight="28dp"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content" />-->
+    </RelativeLayout>
+        <FrameLayout
+
+            android:id="@+id/fl_end"
+            android:layout_alignParentRight="true"
+            android:background="@color/bg_color"
+            android:layout_width="12dp"
+            android:layout_height="130dp"/>
+    <FrameLayout
+        android:layout_below="@id/rl_price"
+        android:id="@+id/fl_bootom"
+        android:layout_alignParentRight="true"
+        android:background="@color/bg_color"
+        android:layout_width="match_parent"
+        android:layout_height="12dp"/>
+
+
+</RelativeLayout>

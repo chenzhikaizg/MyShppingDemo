@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_marginLeft="12dp"
+        android:id="@+id/iv_img"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/yunqianqi_icon_normal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_marginLeft="13dp"
+        android:layout_toRightOf="@id/iv_img"
+        android:layout_marginTop="15dp"
+        android:id="@+id/tv_order_name"
+        android:text="营养师私人服务"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:text="￥135"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@id/tv_order_name"
+        android:textColor="@color/pink_word_home"
+        android:id="@+id/tv_order_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_toRightOf="@id/iv_img"
+        android:layout_below="@id/tv_order_name"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="15dp"
+
+        android:layout_marginRight="32dp"
+        android:text="时间的科技大咖建档立卡京东卡讲道理 打开垃圾袋卡手机里的空间啊肯定静安寺考虑到啊"
+        android:id="@+id/tv_order_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

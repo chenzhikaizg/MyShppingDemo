@@ -49,7 +49,7 @@
                     android:layout_centerHorizontal="true"
                     android:layout_marginRight="12dp"
                     android:scaleType="fitXY"
-                    android:src="@drawable/pull_to_refresh_icon" />
+                    android:src="@mipmap/aiyangrefresh" />
 
                 <TextView
                     android:id="@+id/tv_pull_tip"

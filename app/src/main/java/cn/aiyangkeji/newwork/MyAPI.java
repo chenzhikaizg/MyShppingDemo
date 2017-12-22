@@ -2,6 +2,7 @@ package cn.aiyangkeji.newwork;
 
 
 
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
@@ -25,7 +26,9 @@ import okhttp3.ResponseBody;
 import retrofit2.http.Body;
 import retrofit2.http.DELETE;
 import retrofit2.http.GET;
+import retrofit2.http.HTTP;
 import retrofit2.http.POST;
+import retrofit2.http.PUT;
 import retrofit2.http.Path;
 import retrofit2.http.QueryMap;
 import rx.Observable;
@@ -34,8 +37,6 @@ import rx.Observable;
  * Created by chenzhikai on 2017-11-11.
  */
 public interface MyAPI {
-
-    public final static String API_PREFIX="http://service.artpollo.com/";
 
     @GET("app.php")
     Observable<BannerBean> getBanner(@QueryMap Map<String, Object> maps);
@@ -82,12 +83,21 @@ public interface MyAPI {
     Observable<SelectType2BuyOrCarBean> getAllSpecs(@Path("goodsId") String goodsId,  @QueryMap Map<String, String> maps );
     //加入购物车
     @POST("cart/addCart")
-    Observable<AddCarReturnBean> addCar(@QueryMap Map<String, String> maps );
+    Observable<AddCarReturnBean> addCar(@Body RequestBody body);
     //根据当前登录对象获取购物车
     @GET("cart/user/{userId}")
     Observable<ShoppingCarBean> getCarList(@Path("userId") String userId);
     //删除购物车item
-    @DELETE("cart/deleteCart")
-    Observable<DeleteCartBean> deleteCartItem(@QueryMap Map<String, String> maps);
+//    @DELETE("cart/deleteCart")
+//    Observable<DeleteCartBean> deleteCartItem(@Body RequestBody body);
+    //删除地址
+    @HTTP(method = "DELETE",path = "cart/deleteCart",hasBody = true)
+    Observable<DeleteCartBean> deleteCartItem (@Body HashMap<String,String> content);
+    //编辑联系人地址
+    @PUT("contact")
+    Observable<AddAddressBean> editAddress(@Body RequestBody body);
+    //请求支付
+
+
 
 }

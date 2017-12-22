@@ -26,10 +26,12 @@ import cn.aiyangkeji.R;
 import cn.aiyangkeji.activities.base.BaseActivity;
 import cn.aiyangkeji.activities.store.ActivityConfirmOrderActivity;
 import cn.aiyangkeji.adapter.AddressListAdapter;
+import cn.aiyangkeji.bean.AddAddressBean;
 import cn.aiyangkeji.bean.AddressListBean;
 import cn.aiyangkeji.newwork.MyAPI;
 import cn.aiyangkeji.newwork.MyBaseSubscriber;
 import cn.aiyangkeji.newwork.MyRetrofit;
+import cn.aiyangkeji.util.JsontoRequestBody;
 import cn.aiyangkeji.util.ListViewUtil;
 import cn.aiyangkeji.util.UserInfoUtil;
 
@@ -47,6 +49,9 @@ public class MyShAdressActivity extends BaseActivity implements AdapterView.OnIt
     private AddressListAdapter adapter;
     private int position;
     private int fromPage;//1 购买页面  2我的个人中
+    private Novate novate;
+    private MyAPI myAPI;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -91,8 +96,8 @@ public class MyShAdressActivity extends BaseActivity implements AdapterView.OnIt
     }
 
     private void getAddressList() {
-        Novate novate = new MyRetrofit(this).getMyApiService();
-        MyAPI myAPI = novate.create(MyAPI.class);
+        novate = new MyRetrofit(this).getMyApiService();
+        myAPI = novate.create(MyAPI.class);
         novate.call(myAPI.getAddress(UserInfoUtil.getUserId(this)), new MyBaseSubscriber<AddressListBean>(this) {
             @Override
             public void onError(Throwable e) {
@@ -101,8 +106,8 @@ public class MyShAdressActivity extends BaseActivity implements AdapterView.OnIt
 
             @Override
             public void onNext(AddressListBean addressListBean) {
-                if (addressListBean.resultCode==200){
-                    adapter.addAddressBeans(addressListBean.data);
+                if (addressListBean.resultCode==200&&addressListBean.data!=null){
+                    adapter.addAddressBeans(addressListBean.data.address);
                     lvAddress.setAdapter(adapter);
                     ListViewUtil.adaptiveHight(MyShAdressActivity.this, lvAddress, 0);
 
@@ -165,8 +170,35 @@ public class MyShAdressActivity extends BaseActivity implements AdapterView.OnIt
      */
     private void setDefaultAddress(long id)
     {
+        AddressListBean.Address item = adapter.getItem(position);
+        Map<String ,String> map = new HashMap<String ,String>();
+        map.put("contactId",item.contactId+"");
+        map.put("customerId",UserInfoUtil.getUserId(this)+"");
+        map.put("name",item.name);
+        map.put("mobile",item.mobile);
+        map.put("address",item.address);
+        map.put("province",item.province);
+        map.put("city",item.city);
+        map.put("district",item.district);
+        map.put("disable",1+"");
 
-                        adapter.setDefaultAddress(position);
+        novate.call(myAPI.editAddress(JsontoRequestBody.parameters2json(map)), new MyBaseSubscriber<AddAddressBean>(this) {
+            @Override
+            public void onError(Throwable e) {
+
+            }
+
+            @Override
+            public void onNext(AddAddressBean addAddressBean) {
+                if (addAddressBean.resultCode==200){
+                    adapter.setDefaultAddress(position);
+                }else {
+                    showShortMsg(addAddressBean.message);
+                }
+            }
+        });
+
+
 
     }
 
@@ -175,11 +207,11 @@ public class MyShAdressActivity extends BaseActivity implements AdapterView.OnIt
         super.onActivityResult(requestCode, resultCode, data);
         if (data!=null){
             if (requestCode==1){
-                adapter.addAddressBean((AddressListBean.Value) data.getSerializableExtra("addressBean"));
+                adapter.addAddressBean((AddressListBean.Address) data.getSerializableExtra("addressBean"));
                 ListViewUtil.adaptiveHight(this, lvAddress, 1f);
             }else if (requestCode==2){
 
-                adapter.editAddressBean(position, (AddressListBean.Value) data.getSerializableExtra("addressBean"));
+                adapter.editAddressBean(position, (AddressListBean.Address) data.getSerializableExtra("addressBean"));
             }else {
 
             }

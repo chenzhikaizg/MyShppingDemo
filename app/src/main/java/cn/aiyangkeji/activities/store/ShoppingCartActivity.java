@@ -34,6 +34,7 @@ import cn.aiyangkeji.newwork.MyAPI;
 import cn.aiyangkeji.newwork.MyBaseSubscriber;
 import cn.aiyangkeji.newwork.MyRetrofit;
 import cn.aiyangkeji.util.JsonUtil;
+import cn.aiyangkeji.util.JsontoRequestBody;
 import cn.aiyangkeji.util.ListViewUtil;
 import cn.aiyangkeji.util.UserInfoUtil;
 
@@ -264,7 +265,7 @@ public class ShoppingCartActivity extends BaseActivity {
 
 
     }
-
+    //存储0/1来判断是是不是全选
     List mallStatus = new ArrayList();
 
 
@@ -304,7 +305,6 @@ public class ShoppingCartActivity extends BaseActivity {
                     break;
                 case R.id.iv_check:
                     mallStatus.clear();
-
                     SelectType2BuyOrCarBean.Type selectType2BuyOrCarBean = new SelectType2BuyOrCarBean.Type();
                     selectType2BuyOrCarBean.specs = new ArrayList<SelectType2BuyOrCarBean.TypeList>();
                     ivCheck = (ImageView) ((ViewGroup) v.getParent()).findViewById(R.id.iv_check);
@@ -337,11 +337,12 @@ public class ShoppingCartActivity extends BaseActivity {
                         map.remove(position + "");
                         Log.e("map_remove", "onClick: " + map.size());
                     }
-
+                    //点击每次就去遍历，存储0/1
                     for (ShoppingCarBean.Product value : data) {
                         mallStatus.add(value.status);
 
                     }
+                    //判断有0/1为，来判断是否全选
                     if (mallStatus.contains(0)) {
                         allCheckStatus = 0;
                         Glide.with(ShoppingCartActivity.this).load(R.mipmap.weixianzhong_icon_normal_).into(ivAllCheck);
@@ -360,7 +361,7 @@ public class ShoppingCartActivity extends BaseActivity {
      * @param itemId
      */
     private void deleteAddress(long itemId) {
-        Map<String ,String> maps = new HashMap<String,String>();
+        HashMap<String ,String> maps = new HashMap<String,String>();
         maps.put("userId",UserInfoUtil.getUserId(this)+"");
         maps.put("productId",data.get(position).cartItem.productId+"");
         novate.call(myAPI.deleteCartItem(maps), new MyBaseSubscriber<DeleteCartBean>(this) {

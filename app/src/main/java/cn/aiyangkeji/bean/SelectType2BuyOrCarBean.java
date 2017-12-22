@@ -25,6 +25,7 @@ public class SelectType2BuyOrCarBean extends BaseBean {
 
         public String  specKey;
         public String  store;
+        public String smallImage;
 
     }
     public static  class TypeList implements Serializable {

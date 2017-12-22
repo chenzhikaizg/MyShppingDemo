@@ -165,7 +165,7 @@ public class BannerView extends ViewPager {
             container.addView(view, 0);
 
             vaule = vaules.get(position % vaules.size());
-            Glide.with(getContext()).load(R.mipmap.timg).into(view);
+            Glide.with(getContext()).load(R.mipmap.aaaaa).into(view);
             view.setTag(vaule);
             return view;
         }

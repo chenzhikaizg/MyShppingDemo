@@ -110,7 +110,7 @@ public class GouWuCheAdapter extends BaseAdapter {
             viewHolder.tvPriceNum = (TextView) convertView.findViewById(R.id.tv_price_num);
             viewHolder.tvPrice = (TextView) convertView.findViewById(R.id.tv_price);
             viewHolder.tvDelete = (TextView) convertView.findViewById(R.id.tv_delete);
-            viewHolder.tvColor = (TextView) convertView.findViewById(R.id.tv_color);
+
             viewHolder.tvCheckNum = (TextView) convertView.findViewById(R.id.tv_check_num);
             viewHolder.tvPosition = (TextView) convertView.findViewById(R.id.tv_position);
             viewHolder.ivProductJian = (ImageView) convertView.findViewById(R.id.iv_product_jian);
@@ -164,7 +164,7 @@ public class GouWuCheAdapter extends BaseAdapter {
         private TextView tvProduct;
         private TextView tvPriceNum;
         private TextView tvDelete;
-        private TextView tvColor;
+
         private TextView tvSize;
         private TextView tvCheckNum;
         private TextView tvPosition;

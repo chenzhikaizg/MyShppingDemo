@@ -13,6 +13,7 @@ public class YydjOrderItemBean extends BaseBean {
     public static class ArtImage {
         public int status;
         public String month;
+        public int img;
         public String type;
 
 

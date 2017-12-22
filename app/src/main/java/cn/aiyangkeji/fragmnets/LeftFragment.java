@@ -42,23 +42,38 @@ public class LeftFragment extends Fragment {
 
     private ListView lv;
     private String[] strs = new String[]{"JAVA", "ADNROID", "IOS", "PHP", "HTML5", "Python","程序员","SSSSs","sssss","QQQQQ","SSSSSS","XXXXX","ZZZZZZz","FFSAASASFASDASf","JAVA", "ADNROID", "IOS", "PHP", "HTML5", "Python","程序员","SSSSs","sssss","QQQQQ","SSSSSS","XXXXX","ZZZZZZz","FFSAASASFASDASf"};
+    private int[] imgs = new int[]{R.mipmap.beiyun,R.mipmap.yunqi,R.mipmap.yuezi,R.mipmap.yingyouer,R.mipmap.baobaofushi,R.mipmap.jianfeishoushen,R.mipmap.shiwu};
+    private String[] titles = new String[]{"备孕", "孕期", "月子", "婴幼儿", "宝宝辅食", "减肥瘦身","食物"};
+
     private FrameLayout viewById;
     private List<YydjOrderItemBean.ArtImage> list;
     private ZsLeftAdapter adapter;
+    private List<String> mlist;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.left_fragment,container,false);
-        adapter = new ZsLeftAdapter(getContext());
+        mlist = new ArrayList<String>();
+        for (int i=0;i<strs.length;i++){
+            mlist.add(strs[i]+0);
+
+
+        }
         lv = (ListView) rootView.findViewById(R.id.lv);
         list = new ArrayList<YydjOrderItemBean.ArtImage>();
-        for (int i=0;i<10;i++){
+        for (int i=0;i<imgs.length;i++){
+
             YydjOrderItemBean.ArtImage artImage = new YydjOrderItemBean.ArtImage();
+            if (i==0){
+                artImage.status=1;
+            }
+            artImage.img = imgs[i];
+            artImage.month = titles[i];
             list.add(artImage);
         }
+        adapter = new ZsLeftAdapter(getContext(),mlist);
         adapter.addData(list);
-        final List<String> mlist = new ArrayList<String>();
 
         lv.setAdapter(adapter);
 

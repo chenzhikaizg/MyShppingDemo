@@ -28,12 +28,13 @@ import cn.aiyangkeji.fragmnets.HomeFindFragment;
 import cn.aiyangkeji.fragmnets.HomeMyInfoFragment;
 import cn.aiyangkeji.fragmnets.HomeYouFragment;
 import cn.aiyangkeji.interfaces.CallBackParentMethod;
+import cn.aiyangkeji.util.FragmentManagerHelper;
 import cn.aiyangkeji.util.UserInfoUtil;
 import cn.smssdk.EventHandler;
 import cn.smssdk.SMSSDK;
 //import tyrantgit.explosionfield.ExplosionField;
 
-public class MainActivity extends BaseFragmentActivity  implements CallBackParentMethod {
+public class MainActivity extends BaseFragmentActivity implements CallBackParentMethod {
 
     private LinearLayout llTab;
     private ImageButton ibZhiShi;
@@ -50,6 +51,7 @@ public class MainActivity extends BaseFragmentActivity  implements CallBackParen
     private TextView tvHomeZs;
     private TextView tvHomeWd;
     private EventHandler eventHandler;
+    private FragmentManagerHelper mFragmentHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,24 +63,24 @@ public class MainActivity extends BaseFragmentActivity  implements CallBackParen
         //集成测试
         UMConfigure.setLogEnabled(true);
 
-      }
+    }
 
 
     //初始化view
     @Override
     public void initView() {
 
-        llTab = (LinearLayout)findViewById(R.id.ll_tab);
-        ibZhiShi = (ImageButton)findViewById(R.id.ib_waterfall);
-        ibFind = (ImageButton)findViewById(R.id.ib_find);
-        ibMyInfo = (ImageButton)findViewById(R.id.ib_myinfo);
-        ibYouXuan = (ImageButton)findViewById(R.id.ib_youxuan);
+        llTab = (LinearLayout) findViewById(R.id.ll_tab);
+        ibZhiShi = (ImageButton) findViewById(R.id.ib_waterfall);
+        ibFind = (ImageButton) findViewById(R.id.ib_find);
+        ibMyInfo = (ImageButton) findViewById(R.id.ib_myinfo);
+        ibYouXuan = (ImageButton) findViewById(R.id.ib_youxuan);
 
         //底部栏文字
-        tvHomeYy = (TextView)findViewById(R.id.tv_home_yy);
-        tvHomeYx = (TextView)findViewById(R.id.tv_home_yx);
-        tvHomeZs = (TextView)findViewById(R.id.tv_home_zs);
-        tvHomeWd = (TextView)findViewById(R.id.tv_home_wd);
+        tvHomeYy = (TextView) findViewById(R.id.tv_home_yy);
+        tvHomeYx = (TextView) findViewById(R.id.tv_home_yx);
+        tvHomeZs = (TextView) findViewById(R.id.tv_home_zs);
+        tvHomeWd = (TextView) findViewById(R.id.tv_home_wd);
     }
 
     @Override
@@ -96,19 +98,22 @@ public class MainActivity extends BaseFragmentActivity  implements CallBackParen
 
     @Override
     public void initData() {
-        fragmentManager = this.getSupportFragmentManager();
+        mFragmentHelper = new FragmentManagerHelper(getSupportFragmentManager(), R.id.fl_fragment_container);
+
+//        fragmentManager = this.getSupportFragmentManager();
         //主页的几个fragment
-        homeArtShowFragment = new HomeZhiShiFragment();
+//        homeArtShowFragment = new HomeZhiShiFragment();
         homeFindFragment = new HomeFragment();
-        homeMyInfoFragment = new HomeMyInfoFragment();
-        homeYouFragment = new HomeYouFragment();
-        fragmentManager.beginTransaction().add(R.id.fl_fragment_container, homeFindFragment).commit();
-        fragmentManager.beginTransaction().add(R.id.fl_fragment_container,homeArtShowFragment).commit();
-        fragmentManager.beginTransaction().add(R.id.fl_fragment_container, homeYouFragment).commit();
-        fragmentManager.beginTransaction().add(R.id.fl_fragment_container,homeMyInfoFragment).commit();
+//        homeMyInfoFragment = new HomeMyInfoFragment();
+//        homeYouFragment = new HomeYouFragment();
+        mFragmentHelper.add(homeFindFragment);
+//        fragmentManager.beginTransaction().add(R.id.fl_fragment_container, homeFindFragment).commit();
+//        fragmentManager.beginTransaction().add(R.id.fl_fragment_container,homeArtShowFragment).commit();
+//        fragmentManager.beginTransaction().add(R.id.fl_fragment_container, homeYouFragment).commit();
+//        fragmentManager.beginTransaction().add(R.id.fl_fragment_container,homeMyInfoFragment).commit();
 
 
-        replaceFragment(homeFindFragment);
+        //  replaceFragment(homeFindFragment);
     }
 
 
@@ -148,26 +153,35 @@ public class MainActivity extends BaseFragmentActivity  implements CallBackParen
         switch (v.getId()) {
             case R.id.tv_home_yy:
             case R.id.ib_waterfall:
-                setTabSelected(ibZhiShi, R.mipmap.zhishi_icon_elect_,tvHomeZs);
-                replaceFragment(homeArtShowFragment);
-
+                setTabSelected(ibZhiShi, R.mipmap.zhishi_icon_elect_, tvHomeZs);
+                //   replaceFragment(homeArtShowFragment);
+                if (homeArtShowFragment == null) {
+                    homeArtShowFragment = new HomeZhiShiFragment();
+                }
+                mFragmentHelper.switchFragmnet(homeArtShowFragment);
                 break;
             case R.id.tv_home_zs:
             case R.id.ib_find:
-                setTabSelected(ibFind, R.mipmap.yy_icon_elect_,tvHomeYy);
-                replaceFragment(homeFindFragment);
+                setTabSelected(ibFind, R.mipmap.yy_icon_elect_, tvHomeYy);
+                //   replaceFragment(homeFindFragment);
+                if (homeFindFragment == null) {
+                    homeFindFragment = new HomeFragment();
+                }
+                mFragmentHelper.switchFragmnet(homeFindFragment);
                 break;
             case R.id.tv_home_yx:
             case R.id.ib_youxuan:
-                setTabSelected(ibYouXuan,R.mipmap.youxuan_icon_elect_,tvHomeYx);
-                replaceFragment(homeYouFragment);
+                setTabSelected(ibYouXuan, R.mipmap.youxuan_icon_elect_, tvHomeYx);
+                // replaceFragment(homeYouFragment);
+                if (homeYouFragment == null) {
+                    homeYouFragment = new HomeYouFragment();
+                }
+                mFragmentHelper.switchFragmnet(homeYouFragment);
                 break;
             case R.id.tv_home_wd:
             case R.id.ib_myinfo:
-              //  setTabSelected(ibMyInfo, R.mipmap.wode_icon_elect_,tvHomeWd);
-             //   replaceFragment(homeMyInfoFragment);
-
-
+                //  setTabSelected(ibMyInfo, R.mipmap.wode_icon_elect_,tvHomeWd);
+                //   replaceFragment(homeMyInfoFragment);
 
 
                 if (!UserInfoUtil.isLogin(this)) {
@@ -176,10 +190,12 @@ public class MainActivity extends BaseFragmentActivity  implements CallBackParen
                     startActivityForResult(intent, 0);
 
                 } else {
-                    setTabSelected(ibMyInfo, R.mipmap.wode_icon_elect_,tvHomeWd);
-                    replaceFragment(homeMyInfoFragment);
-
-
+                    setTabSelected(ibMyInfo, R.mipmap.wode_icon_elect_, tvHomeWd);
+                    // replaceFragment(homeMyInfoFragment);
+                    if (homeMyInfoFragment == null) {
+                        homeMyInfoFragment = new HomeMyInfoFragment();
+                    }
+                    mFragmentHelper.switchFragmnet(homeMyInfoFragment);
                 }
                 break;
             default:
@@ -190,8 +206,8 @@ public class MainActivity extends BaseFragmentActivity  implements CallBackParen
     /**
      * 设置tab选中状态
      */
-    private void setTabSelected(ImageButton ib, int drawableResId,TextView view) {
-        ibZhiShi.setImageResource( R.mipmap.zhishi_icon_uncheck_);
+    private void setTabSelected(ImageButton ib, int drawableResId, TextView view) {
+        ibZhiShi.setImageResource(R.mipmap.zhishi_icon_uncheck_);
         ibFind.setImageResource(R.mipmap.yy_icon_uncheck_);
         ibYouXuan.setImageResource(R.mipmap.youxuan_icon_uncheck_);
         ibMyInfo.setImageResource(R.mipmap.wode_icon_uncheck_);
@@ -205,7 +221,7 @@ public class MainActivity extends BaseFragmentActivity  implements CallBackParen
         view.setTextColor(getResources().getColor(R.color.pink_word_home));
     }
 
-//    protected void onSaveInstanceState(Bundle outState) {
+    //    protected void onSaveInstanceState(Bundle outState) {
 //        FragmentTransaction transaction = fragmentManager.beginTransaction();
 //        transaction.remove(homeFindFragment);
 //        transaction.remove(homeArtShowFragment);
@@ -217,12 +233,10 @@ public class MainActivity extends BaseFragmentActivity  implements CallBackParen
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        homeArtShowFragment=null;
-        homeFindFragment=null;
-        homeYouFragment=null;
-        homeMyInfoFragment=null;
-
-
+        homeArtShowFragment = null;
+        homeFindFragment = null;
+        homeYouFragment = null;
+        homeMyInfoFragment = null;
 
 
     }
@@ -232,9 +246,9 @@ public class MainActivity extends BaseFragmentActivity  implements CallBackParen
         super.onActivityResult(requestCode, resultCode, data);
 
         if (resultCode == AppConfig.LOGIN_RESULT_SUCESS_CODE) {
-            setTabSelected(ibMyInfo, R.mipmap.wode_icon_elect_,tvHomeWd);
+            setTabSelected(ibMyInfo, R.mipmap.wode_icon_elect_, tvHomeWd);
             replaceFragment(homeMyInfoFragment);
-        }else  if(requestCode ==AppConfig.LOGIN_RESULT_CANCEL_CODE ){
+        } else if (requestCode == AppConfig.LOGIN_RESULT_CANCEL_CODE) {
             replaceFragment(homeFindFragment);
         }
 
@@ -249,6 +263,7 @@ public class MainActivity extends BaseFragmentActivity  implements CallBackParen
 
     //声明一个long类型变量：用于存放上一点击“返回键”的时刻
     private long mExitTime;
+
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         //判断用户是否点击了“返回键”

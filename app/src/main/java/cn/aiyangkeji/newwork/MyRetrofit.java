@@ -18,8 +18,10 @@ import cn.aiyangkeji.activities.MainActivity;
 public class MyRetrofit {
     private Map<String, Object> parameters = new HashMap<String, Object>();
     private Map<String, String> headers = new HashMap<>();
-
-    private static final String baseUrl = "http://aiyangkeji.cn:8080/iyang-o2o/";
+    //tomcat
+    private static final String baseUrl = "http://192.168.120.233:8080/iyang-o2o/";
+    //线上链接
+   // private static final String baseUrl = "http://aiyangkeji.cn:8080/iyang-o2o/";
     public   MyAPI myApiService;
 
     static Novate novatgeSingleton = null;

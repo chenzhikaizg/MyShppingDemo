@@ -9,6 +9,10 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+
+import org.greenrobot.eventbus.EventBus;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,11 +29,14 @@ public class ZsLeftAdapter extends BaseAdapter {
     private Context mContext;
     private LayoutInflater layoutInflater;
     private ViewHolder viewHolder;
+    private  List<String> mList;
+    private int FIRST = 0;
 
-    public ZsLeftAdapter(Context mContext){
+    public ZsLeftAdapter(Context mContext,List<String> mList){
         this.mContext = mContext;
         values = new ArrayList<YydjOrderItemBean.ArtImage>();
         layoutInflater=LayoutInflater.from(mContext);
+        this.mList = mList;
     }
     public void addData(List<YydjOrderItemBean.ArtImage> values) {
         this.values.addAll(values);
@@ -65,10 +72,20 @@ public class ZsLeftAdapter extends BaseAdapter {
         }else {
             viewHolder = (ViewHolder) view.getTag();
         }
-      //  viewHolder.tvTitle.setText("啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊");
+      viewHolder.tvTitle.setText(values.get(i).month);
+        Glide.with(mContext).load(values.get(i).img).into(viewHolder.ivZhis);
         viewHolder.flBlue.setVisibility(View.GONE);
+
         if (values.get(i).status==1){
             viewHolder.flBlue.setVisibility(View.VISIBLE);
+            if (i==0){
+                //发送数据
+                if (FIRST==0){
+                    EventBus.getDefault().post(mList);
+                    FIRST=1;
+                }
+
+            }
         }
 
 

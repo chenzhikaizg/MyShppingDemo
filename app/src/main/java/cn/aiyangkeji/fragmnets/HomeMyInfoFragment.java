@@ -14,6 +14,9 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.tamic.novate.Novate;
+import com.tamic.novate.callback.RxStringCallback;
+
 import cn.aiyangkeji.FenXiangActivity;
 import cn.aiyangkeji.R;
 import cn.aiyangkeji.activities.loginandregist.LoginActivity;
@@ -224,8 +227,9 @@ public class HomeMyInfoFragment extends BaseFragment {
 //                    intent = new Intent(getContext(), MyYhqActivity.class);
 //
 //                    startActivity(intent);
-                    intent = new Intent(getContext(), FenXiangActivity.class);
-                    startActivity(intent);
+//                    intent = new Intent(getContext(), FenXiangActivity.class);
+//                    startActivity(intent);
+
                     break;
                 case R.id.tv_search:
 

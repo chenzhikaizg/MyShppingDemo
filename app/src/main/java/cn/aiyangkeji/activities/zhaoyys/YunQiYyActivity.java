@@ -41,7 +41,8 @@ import cn.aiyangkeji.view.PagerSlidingTabStrip;
  * 孕期营养
  */
 
-public class YunQiYyActivity extends BaseFragmentActivity implements  ViewPager.OnPageChangeListener {
+public class
+YunQiYyActivity extends BaseFragmentActivity implements  ViewPager.OnPageChangeListener {
     private  PagerSlidingTabStrip mPagerSlidingTabStrip;
     private ViewPager mViewPager;
     private int mLastY;

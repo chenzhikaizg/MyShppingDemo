@@ -50,6 +50,7 @@ android {
 }
 repositories {
 
+
     jcenter()
     flatDir{
         dirs 'libs' //就是你放aar的目录地址
@@ -100,6 +101,7 @@ dependencies {
     compile files('libs/SocialSDK_QQ_Simplify.jar')
     //权限适配
     compile 'com.jph.takephoto:takephoto_library:4.0.3'
+    //支付宝支付
 
-
+    compile files('libs/alipaySdk-20170922.jar')
 }

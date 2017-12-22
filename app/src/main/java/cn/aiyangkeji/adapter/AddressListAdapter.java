@@ -24,15 +24,15 @@ public class AddressListAdapter extends BaseAdapter {
 
     private Context context;
     private LayoutInflater layoutInflater;
-    private List<AddressListBean.Value> values;
+    private List<AddressListBean.Address> values;
     public AddressListAdapter(Context context)
     {
         this.context=context;
         layoutInflater= LayoutInflater.from(context);
-        values=new ArrayList<AddressListBean.Value>();
+        values=new ArrayList<AddressListBean.Address>();
     }
 
-    public void addAddressBeans(List<AddressListBean.Value> values)
+    public void addAddressBeans(List<AddressListBean.Address> values)
     {
         this.values.addAll(values);
 
@@ -47,31 +47,31 @@ public class AddressListAdapter extends BaseAdapter {
        for(int i=0;i<values.size();i++)
        {
            if(i==position) {
-               values.get(i).isdefault =1;
+               values.get(i).disable =1;
            }else{
-               values.get(i).isdefault = 0;
+               values.get(i).disable = 0;
            }
        }
        notifyDataSetChanged();
     }
 
-    public  void addAddressBean(AddressListBean.Value value)
+    public  void addAddressBean(AddressListBean.Address value)
     {
-        if(value.isdefault==1){
-            for(AddressListBean.Value value1:values)
+        if(value.disable==1){
+            for(AddressListBean.Address value1:values)
             {
-                value1.isdefault=0;
+                value1.disable=0;
             }
         }
         values.add(value);
         notifyDataSetChanged();
     }
 
-    public void editAddressBean(int position,AddressListBean.Value value)
+    public void editAddressBean(int position,AddressListBean.Address value)
     {
-         if(value.isdefault==1) {
-             for (AddressListBean.Value value1 : values) {
-                 value1.isdefault=0;
+         if(value.disable==1) {
+             for (AddressListBean.Address value1 : values) {
+                 value1.disable=0;
              }
          }
         values.set(position,value);
@@ -89,7 +89,7 @@ public class AddressListAdapter extends BaseAdapter {
     }
 
     @Override
-    public AddressListBean.Value getItem(int position) {
+    public AddressListBean.Address getItem(int position) {
         return values.get(position);
     }
 
@@ -117,8 +117,8 @@ public class AddressListAdapter extends BaseAdapter {
         }else {
             viewHolder=(ViewHolder)convertView.getTag();
         }
-        AddressListBean.Value value=getItem(position);
-        if(value.isdefault==1)
+        AddressListBean.Address value=getItem(position);
+        if(value.disable==1)
         {
             Glide.with(context).load(R.mipmap.quanzhong_icon_normal_).into(viewHolder.ivStatus);
             viewHolder.tvDefaultAddress.setText("默认地址");
@@ -131,7 +131,7 @@ public class AddressListAdapter extends BaseAdapter {
 
         viewHolder.tvReceiveName.setText("收货人    "+value.name);
         viewHolder.tvReceivePhone.setText("联系方式："+value.mobile);
-        viewHolder.tvReceiveAddress.setText("收货地址："+value.province+value.city+value.district);
+        viewHolder.tvReceiveAddress.setText("收货地址："+value.province+value.city+value.district+value.address);
         viewHolder.tvDefaultAddress.setOnClickListener((View.OnClickListener) context);
         viewHolder.tvEdit.setOnClickListener((View.OnClickListener)context);
         viewHolder.tvDelete.setOnClickListener((View.OnClickListener) context);

@@ -270,7 +270,7 @@ public class AddtoCartActivity extends BaseActivity {
 
         map.put("specs",ljYyueAdapter.getGoodsSpecs());
 
-        novate.call(myAPI.addCar(map ), new MyBaseSubscriber<AddCarReturnBean>(this) {
+        novate.call(myAPI.addCar(JsontoRequestBody.parameters2json(map) ), new MyBaseSubscriber<AddCarReturnBean>(this) {
             @Override
             public void onError(Throwable e) {
 
